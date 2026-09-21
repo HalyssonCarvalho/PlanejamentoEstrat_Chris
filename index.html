@@ -3,167 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Christiane Freitas × Elevra Digital — Strategic Growth Presentation</title>
+<title>Christiane Freitas × Elevra Digital — Fashion Commerce Brand</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#F7F3EA;
-    --bg-panel:#EFE7D6;
-    --card:#FFFFFF;
-    --ink:#1C1812;
-    --ink-soft:#5B5346;
-    --line:#DED2B8;
-    --accent:#9C7A3C;
-    --accent-soft:#C7AE83;
-    --dark-bg:#15130E;
-    --dark-card:#211D15;
-    --dark-line:#3A3427;
-    --dark-text:#F3ECDD;
-    --dark-text-soft:#B9AF9A;
+    --bg:#F7F3EA; --bg-panel:#EFE7D6; --card:#FFFFFF;
+    --ink:#1C1812; --ink-soft:#5B5346; --line:#DED2B8;
+    --accent:#9C7A3C; --accent-soft:#C7AE83;
+    --dark-bg:#15130E; --dark-card:#211D15; --dark-line:#3A3427;
+    --dark-text:#F3ECDD; --dark-text-soft:#B9AF9A;
     --serif:'Fraunces', Georgia, serif;
     --sans:'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
   :root:not([data-theme="light"]){
     @media (prefers-color-scheme: dark){
-      --bg:#15130E;
-      --bg-panel:#1B1810;
-      --card:#211D15;
-      --ink:#F3ECDD;
-      --ink-soft:#B9AF9A;
-      --line:#3A3427;
-      --accent:#C7AE83;
-      --accent-soft:#9C7A3C;
+      --bg:#15130E; --bg-panel:#1B1810; --card:#211D15;
+      --ink:#F3ECDD; --ink-soft:#B9AF9A; --line:#3A3427;
+      --accent:#C7AE83; --accent-soft:#9C7A3C;
     }
   }
   :root[data-theme="dark"]{
-    --bg:#15130E;
-    --bg-panel:#1B1810;
-    --card:#211D15;
-    --ink:#F3ECDD;
-    --ink-soft:#B9AF9A;
-    --line:#3A3427;
-    --accent:#C7AE83;
-    --accent-soft:#9C7A3C;
+    --bg:#15130E; --bg-panel:#1B1810; --card:#211D15;
+    --ink:#F3ECDD; --ink-soft:#B9AF9A; --line:#3A3427;
+    --accent:#C7AE83; --accent-soft:#9C7A3C;
   }
   *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
-  html{
-    scroll-behavior:smooth;
-    scroll-padding-top: calc(72px + env(safe-area-inset-top,0px));
-  }
+  html{scroll-behavior:smooth; scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));}
   body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:var(--sans);
-    line-height:1.5;
+    margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.5;
     -webkit-font-smoothing:antialiased;
-    padding-top:env(safe-area-inset-top,0px);
-    padding-bottom:env(safe-area-inset-bottom,0px);
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
     overflow-x:hidden;
   }
   img,svg{max-width:100%; display:block;}
   a{color:inherit;}
 
-  /* ---------- top progress + nav ---------- */
-  #progress{
-    position:fixed; top:env(safe-area-inset-top,0px); left:0; height:2px; width:0%;
-    background:var(--accent); z-index:60; transition:width .1s linear;
-  }
+  #progress{position:fixed; top:env(safe-area-inset-top,0px); left:0; height:2px; width:0%; background:var(--accent); z-index:60; transition:width .1s linear;}
   header.topbar{
     position:fixed; top:env(safe-area-inset-top,0px); left:0; right:0; z-index:50;
-    display:flex; align-items:center; justify-content:space-between;
-    padding:18px 24px;
-    background:color-mix(in srgb, var(--bg) 86%, transparent);
-    backdrop-filter:blur(10px);
+    display:flex; align-items:center; justify-content:space-between; padding:18px 24px;
+    background:color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
   }
-  .brandmark{
-    font-family:var(--serif); font-weight:500; font-size:15px; letter-spacing:.02em;
-  }
+  .brandmark{font-family:var(--serif); font-weight:500; font-size:15px; letter-spacing:.02em;}
   .brandmark b{font-weight:600;}
-  .menu-btn{
-    background:none; border:1px solid var(--line); color:var(--ink);
-    width:40px; height:40px; border-radius:2px; cursor:pointer;
-    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px;
-  }
+  .menu-btn{background:none; border:1px solid var(--line); color:var(--ink); width:40px; height:40px; border-radius:2px; cursor:pointer; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px;}
   .menu-btn span{display:block; width:16px; height:1px; background:var(--ink);}
 
-  nav.fullnav{
-    position:fixed; inset:0; z-index:70; background:var(--dark-bg); color:var(--dark-text);
-    padding: calc(24px + env(safe-area-inset-top,0px)) 28px calc(28px + env(safe-area-inset-bottom,0px));
-    display:none; overflow-y:auto;
-  }
+  nav.fullnav{position:fixed; inset:0; z-index:70; background:var(--dark-bg); color:var(--dark-text); padding:calc(24px + env(safe-area-inset-top,0px)) 28px calc(28px + env(safe-area-inset-bottom,0px)); display:none; overflow-y:auto;}
   nav.fullnav.open{display:block;}
   nav.fullnav .navhead{display:flex; justify-content:space-between; align-items:center; margin-bottom:36px;}
   nav.fullnav .close-btn{background:none;border:1px solid var(--dark-line);color:var(--dark-text);width:40px;height:40px;border-radius:2px;font-size:18px;cursor:pointer;}
   nav.fullnav ol{list-style:none; margin:0; padding:0; counter-reset:navnum;}
   nav.fullnav li{border-bottom:1px solid var(--dark-line);}
-  nav.fullnav a{
-    display:flex; align-items:baseline; gap:16px; padding:16px 2px;
-    font-family:var(--serif); font-size:22px; font-weight:400; text-decoration:none;
-    color:var(--dark-text);
-  }
-  nav.fullnav a::before{
-    counter-increment:navnum; content:counter(navnum,decimal-leading-zero);
-    font-family:var(--sans); font-size:12px; color:var(--dark-text-soft); flex-shrink:0;
-  }
+  nav.fullnav a{display:flex; align-items:baseline; gap:16px; padding:15px 2px; font-family:var(--serif); font-size:20px; font-weight:400; text-decoration:none; color:var(--dark-text);}
+  nav.fullnav a::before{counter-increment:navnum; content:counter(navnum,decimal-leading-zero); font-family:var(--sans); font-size:12px; color:var(--dark-text-soft); flex-shrink:0;}
 
-  /* ---------- generic section layout ---------- */
-  section{
-    padding:104px 24px;
-    max-width:1080px;
-    margin:0 auto;
-    scroll-margin-top:72px;
-  }
+  section{padding:104px 24px; max-width:1080px; margin:0 auto; scroll-margin-top:72px;}
   section.full{max-width:none; padding-left:0; padding-right:0;}
   .inner{max-width:1080px; margin:0 auto; padding:0 24px;}
-  .kicker{
-    font-size:12px; text-transform:uppercase; letter-spacing:.14em; color:var(--accent);
-    font-weight:600; margin:0 0 18px;
-  }
+  .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.14em; color:var(--accent); font-weight:600; margin:0 0 18px;}
   h1,h2,h3{font-family:var(--serif); font-weight:500; margin:0; color:var(--ink);}
   h2{font-size:clamp(30px,5.4vw,52px); line-height:1.08; letter-spacing:-.01em;}
   h3{font-size:clamp(19px,2.6vw,24px); font-weight:600;}
   p{margin:0; color:var(--ink-soft); font-size:16px; max-width:62ch;}
-  .lede{font-size:clamp(17px,2vw,20px); color:var(--ink-soft); max-width:56ch; margin-top:20px;}
-  .stack{display:flex; flex-direction:column; gap:14px;}
+  .lede{font-size:clamp(17px,2vw,20px); color:var(--ink-soft); max-width:58ch; margin-top:20px;}
   .divider{height:1px; background:var(--line); border:none; margin:64px 0;}
 
-  /* dark statement sections */
-  .statement{
-    background:var(--dark-bg); color:var(--dark-text);
-  }
+  .statement{background:var(--dark-bg); color:var(--dark-text);}
   .statement h2, .statement h1{color:var(--dark-text);}
   .statement p{color:var(--dark-text-soft);}
   .statement .kicker{color:var(--accent-soft);}
 
-  /* cover */
-  #cover{
-    min-height:92vh; min-height:92svh; display:flex; flex-direction:column;
-    justify-content:flex-end; padding-top:calc(160px + env(safe-area-inset-top,0px));
-    background:var(--dark-bg); color:var(--dark-text); max-width:none;
-  }
+  #cover{min-height:92vh; min-height:92svh; display:flex; flex-direction:column; justify-content:flex-end; padding-top:calc(160px + env(safe-area-inset-top,0px)); background:var(--dark-bg); color:var(--dark-text); max-width:none;}
   #cover .inner{padding-bottom:72px;}
   #cover .tag{font-family:var(--sans); font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-soft); margin-bottom:28px;}
-  #cover h1{
-    font-size:clamp(40px,8vw,84px); line-height:1.02; color:var(--dark-text); font-weight:400; letter-spacing:-.01em;
-  }
-  #cover .sub{margin-top:28px; font-size:clamp(17px,2.4vw,22px); color:var(--dark-text-soft); max-width:44ch; font-family:var(--serif); font-style:italic; font-weight:400;}
-  #cover .meta{
-    margin-top:56px; display:flex; gap:32px; flex-wrap:wrap;
-    font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--dark-text-soft);
-    border-top:1px solid var(--dark-line); padding-top:20px;
-  }
+  #cover h1{font-size:clamp(38px,7.6vw,78px); line-height:1.03; color:var(--dark-text); font-weight:400; letter-spacing:-.01em;}
+  #cover .sub{margin-top:28px; font-size:clamp(17px,2.4vw,22px); color:var(--dark-text-soft); max-width:46ch; font-family:var(--serif); font-style:italic; font-weight:400;}
+  #cover .meta{margin-top:56px; display:flex; gap:32px; flex-wrap:wrap; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--dark-text-soft); border-top:1px solid var(--dark-line); padding-top:20px;}
 
-  /* impact slide (huge type) */
   .impact{background:var(--bg-panel); text-align:left;}
-  .impact .big{font-family:var(--serif); font-weight:400; font-size:clamp(34px,6.4vw,64px); line-height:1.06; letter-spacing:-.01em;}
+  .impact .big{font-family:var(--serif); font-weight:400; font-size:clamp(32px,6vw,58px); line-height:1.08; letter-spacing:-.01em;}
   .impact .big em{font-style:italic; color:var(--accent);}
-  .impact .small{margin-top:36px; font-size:clamp(28px,4.4vw,40px); font-family:var(--serif); color:var(--ink-soft);}
+  .impact .small{margin-top:32px; font-size:clamp(24px,4vw,36px); font-family:var(--serif); color:var(--ink-soft);}
 
-  /* grid utilities */
   .grid{display:grid; gap:20px;}
   .grid-2{grid-template-columns:repeat(2,1fr);}
   .grid-3{grid-template-columns:repeat(3,1fr);}
@@ -171,93 +96,71 @@
   @media (max-width:860px){ .grid-2,.grid-3,.grid-4{grid-template-columns:1fr;} }
   @media (min-width:861px) and (max-width:1100px){ .grid-4{grid-template-columns:repeat(2,1fr);} }
 
-  .card{
-    background:var(--card); border:1px solid var(--line); border-radius:3px; padding:28px;
-  }
-  .card h3{margin-bottom:10px;}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:3px; padding:26px;}
+  .card h3{margin-bottom:8px;}
   .card p{max-width:none;}
   .tag-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
-  .pill{
-    font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft);
-    border:1px solid var(--line); border-radius:20px; padding:5px 12px;
-  }
+  .pill{font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); border:1px solid var(--line); border-radius:20px; padding:5px 12px;}
 
-  /* before / after */
-  .ba{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line); margin-top:48px;}
-  @media (max-width:760px){.ba{grid-template-columns:1fr;}}
-  .ba > div{background:var(--card); padding:44px 36px;}
-  .ba .before{background:var(--bg-panel);}
-  .ba .label{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin-bottom:18px;}
-  .ba ul{margin:0; padding:0; list-style:none;}
-  .ba li{padding:9px 0; border-top:1px solid var(--line); font-size:15px; color:var(--ink-soft);}
-  .ba li:first-child{border-top:none;}
-  .ba .quote{margin-top:22px; font-family:var(--serif); font-style:italic; font-size:19px; color:var(--ink);}
-
-  /* tables */
-  table{width:100%; border-collapse:collapse; font-size:14.5px;}
-  th,td{text-align:left; padding:13px 14px; border-bottom:1px solid var(--line); vertical-align:top;}
-  th{font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); font-weight:600;}
+  table{width:100%; border-collapse:collapse; font-size:14px;}
+  th,td{text-align:left; padding:12px 13px; border-bottom:1px solid var(--line); vertical-align:top;}
+  th{font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); font-weight:600;}
   td.num, th.num{text-align:right; white-space:nowrap;}
   tfoot td{font-weight:700; border-top:2px solid var(--ink); border-bottom:none; color:var(--ink);}
   .table-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:3px;}
-  .table-wrap table{min-width:560px;}
+  .table-wrap table{min-width:600px;}
 
-  /* scenario cards */
   .scenario-head{display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:16px;}
-  .scenario-total{font-family:var(--serif); font-size:30px; color:var(--accent);}
-  .capacity{margin-top:16px; font-size:13.5px; color:var(--ink-soft); border-top:1px dashed var(--line); padding-top:14px;}
+  .scenario-total{font-family:var(--serif); font-size:28px; color:var(--accent);}
+  .capacity{margin-top:16px; font-size:13px; color:var(--ink-soft); border-top:1px dashed var(--line); padding-top:14px;}
 
-  /* funnel / flow */
   .flow{display:flex; flex-direction:column; align-items:center; gap:0; margin-top:8px;}
-  .flow-step{
-    width:100%; max-width:480px; background:var(--card); border:1px solid var(--line);
-    padding:16px 22px; text-align:center; border-radius:3px; font-size:14.5px; font-weight:500;
-  }
+  .flow-step{width:100%; max-width:480px; background:var(--card); border:1px solid var(--line); padding:15px 22px; text-align:center; border-radius:3px; font-size:14px; font-weight:500;}
   .flow-arrow{color:var(--accent-soft); font-size:18px; padding:6px 0;}
-  .flow-note{font-size:12.5px; color:var(--ink-soft); margin-top:4px; font-weight:400;}
 
-  /* reels / hooks grid */
-  .mini-card{background:var(--card); border:1px solid var(--line); border-radius:3px; padding:20px;}
-  .mini-card .n{font-size:11px; color:var(--accent-soft); font-weight:600; letter-spacing:.06em;}
-  .mini-card .hook{font-family:var(--serif); font-size:17px; margin:8px 0 10px; color:var(--ink); line-height:1.3;}
-  .mini-card dl{margin:0; font-size:12.5px; color:var(--ink-soft);}
-  .mini-card dt{font-weight:600; color:var(--ink); display:inline;}
-  .mini-card dd{margin:0 0 6px; display:inline;}
-  .mini-card .row{display:block; margin-bottom:5px;}
+  .def-table td:first-child{font-weight:600; color:var(--ink); white-space:nowrap;}
 
-  .hook-list{columns:1; column-gap:40px;}
-  @media(min-width:760px){.hook-list{columns:2;}}
-  .hook-item{break-inside:avoid; padding:14px 0; border-top:1px solid var(--line); font-family:var(--serif); font-size:17px; line-height:1.35;}
-  .hook-item:first-child{border-top:none;}
-  .hook-item .cat{display:block; font-family:var(--sans); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:5px;}
+  /* reels accordion */
+  details.reel{border:1px solid var(--line); border-radius:3px; margin-bottom:10px; background:var(--card); overflow:hidden;}
+  details.reel summary{
+    list-style:none; cursor:pointer; padding:18px 22px; display:flex; align-items:baseline; gap:16px;
+    font-family:var(--serif); font-size:17px; color:var(--ink);
+  }
+  details.reel summary::-webkit-details-marker{display:none;}
+  details.reel summary .rn{font-family:var(--sans); font-size:11px; color:var(--accent-soft); font-weight:600; flex-shrink:0;}
+  details.reel summary::after{
+    content:'+'; margin-left:auto; font-family:var(--sans); font-size:20px; color:var(--accent);
+  }
+  details.reel[open] summary::after{content:'–';}
+  details.reel .reel-body{padding:0 22px 22px; font-size:13.5px; color:var(--ink-soft); display:grid; grid-template-columns:1fr 1fr; gap:6px 28px;}
+  @media(max-width:640px){ details.reel .reel-body{grid-template-columns:1fr;} }
+  details.reel .reel-body .full-row{grid-column:1/-1;}
+  details.reel .reel-body b{color:var(--ink); font-weight:600;}
 
-  /* roadmap phases */
+  .protocol-col{background:var(--card); border:1px solid var(--line); border-radius:3px; padding:24px;}
+  .protocol-col h4{font-family:var(--sans); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); margin:0 0 12px;}
+  .protocol-col ul{margin:0; padding-left:18px; color:var(--ink-soft); font-size:14px;}
+  .protocol-col li{margin-bottom:6px;}
+
   .phase{border:1px solid var(--line); border-radius:3px; margin-bottom:20px; overflow:hidden;}
   .phase-head{background:var(--bg-panel); padding:22px 28px; display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px;}
   .phase-head .days{font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent);}
   .phase-body{padding:26px 28px; display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
   @media(max-width:700px){.phase-body{grid-template-columns:1fr;}}
   .phase-body h4{font-family:var(--sans); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); margin:0 0 8px; font-weight:600;}
-  .phase-body p, .phase-body li{font-size:14.5px;}
+  .phase-body p, .phase-body li{font-size:14px;}
   .phase-body ul{margin:0; padding-left:18px; color:var(--ink-soft);}
 
-  /* 14 days list */
-  .day-row{display:grid; grid-template-columns:76px 1fr; gap:18px; padding:16px 0; border-top:1px solid var(--line);}
+  .day-row{display:grid; grid-template-columns:76px 1fr; gap:18px; padding:15px 0; border-top:1px solid var(--line);}
   .day-row:first-child{border-top:none;}
-  .day-row .day-num{font-family:var(--serif); font-size:26px; color:var(--accent-soft);}
-  .day-row .day-title{font-weight:600; margin-bottom:3px;}
-  .day-row .day-detail{font-size:14px; color:var(--ink-soft);}
+  .day-row .day-num{font-family:var(--serif); font-size:24px; color:var(--accent-soft);}
+  .day-row .day-title{font-weight:600; margin-bottom:3px; font-size:14.5px;}
+  .day-row .day-detail{font-size:13.5px; color:var(--ink-soft);}
 
-  /* footer nav pill (page label) */
-  .page-tag{position:absolute; right:24px; bottom:64px; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); opacity:.7;}
+  .quote-block{font-family:var(--serif); font-size:clamp(24px,3.4vw,34px); line-height:1.3; font-weight:400; font-style:italic; max-width:22ch;}
+  .callout{background:var(--bg-panel); border-left:3px solid var(--accent); padding:20px 24px; font-size:14px; color:var(--ink-soft); border-radius:0 3px 3px 0;}
 
-  .quote-block{font-family:var(--serif); font-size:clamp(24px,3.4vw,34px); line-height:1.3; font-weight:400; font-style:italic; max-width:20ch;}
-
-  footer.enddeck{
-    background:var(--dark-bg); color:var(--dark-text-soft); text-align:center; padding:60px 24px calc(60px + env(safe-area-inset-bottom,0px));
-    font-size:12.5px; letter-spacing:.06em;
-  }
-
+  footer.enddeck{background:var(--dark-bg); color:var(--dark-text-soft); text-align:center; padding:60px 24px calc(60px + env(safe-area-inset-bottom,0px)); font-size:12.5px; letter-spacing:.06em;}
   ::selection{background:var(--accent-soft); color:var(--dark-bg);}
 </style>
 </head>
@@ -278,34 +181,32 @@
   <ol>
     <li><a href="#cover" class="nlink">Abertura</a></li>
     <li><a href="#contexto" class="nlink">Onde estamos</a></li>
-    <li><a href="#reposicionamento" class="nlink">O reposicionamento</a></li>
-    <li><a href="#posicionamento" class="nlink">Posicionamento & experiência</a></li>
-    <li><a href="#publico" class="nlink">Cliente ideal</a></li>
-    <li><a href="#produtos" class="nlink">Escada de produtos</a></li>
-    <li><a href="#hero-offer" class="nlink">Hero offer</a></li>
-    <li><a href="#receita" class="nlink">Arquitetura de $50K</a></li>
-    <li><a href="#pilares" class="nlink">Pilares de conteúdo</a></li>
-    <li><a href="#series" class="nlink">Séries & calendário</a></li>
-    <li><a href="#reels" class="nlink">30 reels</a></li>
-    <li><a href="#hooks" class="nlink">30 hooks</a></li>
-    <li><a href="#engajamento" class="nlink">Engajamento & local growth</a></li>
-    <li><a href="#bio" class="nlink">Bio, perfil & funil</a></li>
-    <li><a href="#papeis" class="nlink">Papéis & tecnologia</a></li>
-    <li><a href="#kpis" class="nlink">KPIs</a></li>
-    <li><a href="#roadmap" class="nlink">Roadmap 90 dias</a></li>
+    <li><a href="#visao" class="nlink">A nova visão</a></li>
+    <li><a href="#posicionamento" class="nlink">Posicionamento & brand statement</a></li>
+    <li><a href="#motores" class="nlink">Os 4 motores de receita</a></li>
+    <li><a href="#meta50k" class="nlink">GMV, receita e lucro — a meta de $50K</a></li>
+    <li><a href="#pilares" class="nlink">7 pilares de conteúdo</a></li>
+    <li><a href="#series" class="nlink">Séries proprietárias</a></li>
+    <li><a href="#southflorida" class="nlink">South Florida content engine</a></li>
+    <li><a href="#funil" class="nlink">Social commerce funnel</a></li>
+    <li><a href="#bio" class="nlink">Bio do Instagram</a></li>
+    <li><a href="#calendario" class="nlink">Calendário semanal</a></li>
+    <li><a href="#shoppingday" class="nlink">Protocolo de shopping day</a></li>
+    <li><a href="#reels" class="nlink">30 reels completos</a></li>
+    <li><a href="#engajamento" class="nlink">Engajamento & validação de produto</a></li>
+    <li><a href="#papeis" class="nlink">Papel da Elevra</a></li>
+    <li><a href="#90dias" class="nlink">Primeiros 90 dias</a></li>
     <li><a href="#14dias" class="nlink">Primeiros 14 dias</a></li>
-    <li><a href="#founding" class="nlink">Founding Clients</a></li>
-    <li><a href="#visao" class="nlink">Visão de longo prazo</a></li>
-    <li><a href="#fechamento" class="nlink">Fechamento</a></li>
+    <li><a href="#fechamento" class="nlink">Mensagem final</a></li>
   </ol>
 </nav>
 
 <!-- ============ COVER ============ -->
 <section id="cover">
   <div class="inner">
-    <div class="tag">Strategic Growth Presentation — Setembro 2026</div>
-    <h1>The Christiane<br>Freitas Business.</h1>
-    <div class="sub">From fashion creator to South Florida image authority — attention, turned into revenue architecture.</div>
+    <div class="tag">Strategic Presentation — Setembro 2026</div>
+    <h1>From Fashion Creator<br>to Fashion<br>Commerce Brand.</h1>
+    <div class="sub">She already finds what people want. Now we build the system that turns those finds into sales.</div>
     <div class="meta">
       <span>@bychrisinha</span>
       <span>South Florida, USA</span>
@@ -317,709 +218,733 @@
 <!-- ============ IMPACT ============ -->
 <section class="full impact">
   <div class="inner">
-    <div class="big">2,280 followers <em>is not the business.</em></div>
-    <div class="small">Christiane Freitas is the business.</div>
+    <div class="big">2,280 followers <em>is just the audience.</em></div>
+    <div class="small">The business is what we build around it.</div>
   </div>
 </section>
 
 <!-- ============ CONTEXTO ============ -->
 <section id="contexto">
   <div class="kicker">01 · Onde estamos</div>
-  <h2>Ela já tem o ativo mais difícil de construir: atenção real.</h2>
-  <p class="lede">O perfil @bychrisinha já produz conteúdo de moda, provadores e lifestyle nos EUA — e parte desse conteúdo já ultrapassa, em alcance, o próprio tamanho da audiência atual. Isso é sinal de formato certo, posicionamento ainda incompleto.</p>
+  <h2>Ela já faz tudo isso naturalmente. Falta a infraestrutura comercial.</h2>
+  <p class="lede">Provador, SHEIN, Zara, Mango, achadinhos, looks reais, lifestyle — o conteúdo já existe e já performa acima do tamanho da audiência atual. Não estamos começando do zero: estamos construindo o motor de vendas ao redor do que já funciona.</p>
 
-  <div class="grid grid-4" style="margin-top:56px;">
-    <div class="card"><h3 style="font-size:34px; font-family:var(--serif); font-weight:400;">2,280</h3><p style="font-size:13px;">seguidores atuais</p></div>
-    <div class="card"><h3 style="font-size:34px; font-family:var(--serif); font-weight:400;">~50</h3><p style="font-size:13px;">posts publicados</p></div>
-    <div class="card"><h3 style="font-size:34px; font-family:var(--serif); font-weight:400;">16K</h3><p style="font-size:13px;">views no melhor Reel — 7x o alcance da audiência atual</p></div>
-    <div class="card"><h3 style="font-size:34px; font-family:var(--serif); font-weight:400;">93</h3><p style="font-size:13px;">contas seguidas</p></div>
+  <div class="grid grid-4" style="margin-top:52px;">
+    <div class="card"><h3 style="font-size:32px; font-family:var(--serif); font-weight:400;">2,280</h3><p style="font-size:13px;">seguidores atuais</p></div>
+    <div class="card"><h3 style="font-size:32px; font-family:var(--serif); font-weight:400;">~50</h3><p style="font-size:13px;">posts publicados</p></div>
+    <div class="card"><h3 style="font-size:32px; font-family:var(--serif); font-weight:400;">16K</h3><p style="font-size:13px;">views no melhor Reel — 7x a audiência atual</p></div>
+    <div class="card"><h3 style="font-size:32px; font-family:var(--serif); font-weight:400;">93</h3><p style="font-size:13px;">contas seguidas</p></div>
   </div>
 
   <div class="divider"></div>
-
-  <div class="grid grid-2">
-    <div>
-      <h3>O que já funciona</h3>
-      <p style="margin-top:12px;">Provadores, achadinhos (Zara, Mango, SHEIN), looks reais e conteúdo sobre a vida nos EUA. Isso é topo de funil validado — gera alcance de forma consistente e deve continuar existindo.</p>
-    </div>
-    <div>
-      <h3>O que está limitando</h3>
-      <p style="margin-top:12px;">O posicionamento atual ainda é lido como "fashion creator / achadinhos / provador". Isso trava o ticket médio e a percepção de autoridade — ninguém paga preço de consultoria por quem só mostra roupa barata.</p>
-    </div>
-  </div>
-
-  <div class="divider"></div>
-
-  <div class="card" style="background:var(--bg-panel); border:none;">
-    <p style="font-family:var(--serif); font-style:italic; font-size:19px; color:var(--ink); max-width:44ch;">Provador gera alcance. Educação gera autoridade. Lifestyle gera desejo. Transformação gera prova. CTA gera leads. Consultoria gera receita.</p>
+  <h3 style="margin-bottom:20px;">A jornada que vamos construir</h3>
+  <div class="flow">
+    <div class="flow-step">Content</div><div class="flow-arrow">→</div>
+    <div class="flow-step">Attention</div><div class="flow-arrow">→</div>
+    <div class="flow-step">Product Discovery</div><div class="flow-arrow">→</div>
+    <div class="flow-step">Desire</div><div class="flow-arrow">→</div>
+    <div class="flow-step">Click / DM</div><div class="flow-arrow">→</div>
+    <div class="flow-step">Purchase</div><div class="flow-arrow">→</div>
+    <div class="flow-step" style="border-color:var(--accent); font-weight:600;">Repeat Purchase</div>
   </div>
 </section>
 
-<!-- ============ REPOSICIONAMENTO ============ -->
-<section id="reposicionamento">
-  <div class="kicker">02 · O reposicionamento</div>
-  <h2>Não estamos apagando quem ela é. Estamos adicionando autoridade e monetização.</h2>
-  <p class="lede">O conteúdo atual continua existindo — como topo de funil. Ao redor dele, construímos uma camada de autoridade, transformação e oferta que hoje não existe.</p>
+<!-- ============ NOVA VISÃO ============ -->
+<section id="visao">
+  <div class="kicker">02 · A nova visão</div>
+  <h2>Fashion Creator + Product Curator + Shopping Personality.</h2>
+  <p class="lede">Não estamos transformando Christiane em consultora de nada. Estamos transformando o que ela já faz — procurar, provar, montar looks, mostrar achadinhos — em uma marca de comércio de moda. O conteúdo deixa de ser só entretenimento: ele vira infraestrutura de aquisição de clientes.</p>
 
-  <div class="ba">
-    <div class="before">
-      <div class="label">Antes</div>
-      <ul>
-        <li>Digital Creator</li>
-        <li>Looks & achadinhos</li>
-        <li>Provadores</li>
-        <li>Zara · Mango · SHEIN</li>
-      </ul>
-      <div class="quote">"I show you what to wear."</div>
-    </div>
-    <div class="after">
-      <div class="label">Depois</div>
-      <ul>
-        <li>Image & Style Consultant</li>
-        <li>Fashion Creator</li>
-        <li>Personal Stylist</li>
-        <li>South Florida Style Authority</li>
-      </ul>
-      <div class="quote">"I help women build the image that finally matches who they've become."</div>
-    </div>
+  <div class="card" style="margin-top:40px; background:var(--bg-panel); border:none;">
+    <p style="font-family:var(--serif); font-style:italic; font-size:22px; color:var(--ink); max-width:34ch;">From content creator to fashion commerce brand.</p>
   </div>
 </section>
 
-<!-- ============ POSICIONAMENTO / EXPERIÊNCIA ============ -->
+<!-- ============ POSICIONAMENTO ============ -->
 <section id="posicionamento">
-  <div class="kicker">03 · Posicionamento central</div>
-  <h2>O território: fashion + image + confidence + South Florida lifestyle.</h2>
-  <p class="lede">Christiane não vai competir como "mais uma stylist". A marca vira uma experiência com nome, geografia e reconhecimento — não apenas um serviço.</p>
+  <div class="kicker">03 · Posicionamento</div>
+  <h2>Aspirational but accessible.</h2>
+  <p class="lede">A mulher vê um lifestyle desejável — mas percebe, na mesma cena, que pode comprar aquilo. Nada de "moda barata". Também nada de luxo inatingível. O meio-termo é o produto.</p>
 
-  <div class="grid grid-2" style="margin-top:48px;">
-    <div class="card">
-      <div class="pill">Opção 1</div>
-      <h3 style="margin-top:14px;">The Christiane Style Experience</h3>
-      <p style="margin-top:10px;">Marca centrada na pessoa. Mais fácil de comunicar no início, cresce junto com a autoridade pessoal dela, mas depende 100% da presença dela para escalar.</p>
-    </div>
-    <div class="card" style="border-color:var(--accent);">
-      <div class="pill" style="border-color:var(--accent); color:var(--accent);">Recomendado</div>
-      <h3 style="margin-top:14px;">The South Florida Style Experience</h3>
-      <p style="margin-top:10px;">Marca centrada no território. Christiane é a autoridade fundadora, mas a marca pode acomodar produtos digitais, eventos, e futuramente uma equipe de stylists — sem ficar presa ao nome de uma pessoa só.</p>
-    </div>
+  <div class="tag-row" style="margin-top:28px;">
+    <span class="pill">Real Looks</span>
+    <span class="pill">Florida Finds</span>
+    <span class="pill">Affordable Fashion</span>
+    <span class="pill">Outlet Discoveries</span>
+    <span class="pill">SHEIN Finds</span>
+    <span class="pill">Luxury Inspiration</span>
+    <span class="pill">Smart Shopping</span>
+    <span class="pill">South Florida Lifestyle</span>
   </div>
-  <p style="margin-top:20px; font-size:14px;"><b style="color:var(--ink);">Recomendação:</b> usar <i>The South Florida Style Experience</i> como arquitetura de marca guarda-chuva, com "Christiane Freitas, Image & Style Consultant" como a assinatura pessoal por trás dela — o melhor dos dois mundos.</p>
 
   <div class="divider"></div>
-
-  <h3 style="margin-bottom:18px;">A experiência acontece nos lugares certos</h3>
-  <p style="margin-bottom:24px;">Cada localização vira conteúdo de autoridade — não apenas cenário bonito.</p>
-  <div class="tag-row">
-    <span class="pill">Miami Design District</span>
-    <span class="pill">Bal Harbour</span>
-    <span class="pill">Aventura</span>
-    <span class="pill">Las Olas</span>
-    <span class="pill">Boca Raton</span>
-    <span class="pill">Worth Avenue · Palm Beach</span>
+  <h3 style="margin-bottom:20px;">Brand statement — 4 opções</h3>
+  <div class="grid grid-2">
+    <div class="card"><p style="font-family:var(--serif); font-style:italic; font-size:19px; color:var(--ink);">"Luxury inspiration. Real-world prices."</p></div>
+    <div class="card" style="border-color:var(--accent);"><p style="font-family:var(--serif); font-style:italic; font-size:19px; color:var(--ink);">"She finds it so you don't have to."</p></div>
+    <div class="card"><p style="font-family:var(--serif); font-style:italic; font-size:19px; color:var(--ink);">"The look you want, at the price you'll actually pay."</p></div>
+    <div class="card"><p style="font-family:var(--serif); font-style:italic; font-size:19px; color:var(--ink);">"Florida fashion, found first."</p></div>
   </div>
-  <div class="grid grid-3" style="margin-top:28px;">
-    <div class="card"><p style="font-family:var(--serif); font-style:italic; font-size:16px; color:var(--ink);">"What I would wear for dinner in Bal Harbour."</p></div>
-    <div class="card"><p style="font-family:var(--serif); font-style:italic; font-size:16px; color:var(--ink);">"I recreated this $4,800 look for under $300."</p></div>
-    <div class="card"><p style="font-family:var(--serif); font-style:italic; font-size:16px; color:var(--ink);">"If I had $1,000 to rebuild your wardrobe in Miami, this is what I'd buy."</p></div>
-  </div>
+  <p style="margin-top:18px; font-size:14px;"><b style="color:var(--ink);">Recomendação:</b> "Luxury inspiration. Real-world prices." como assinatura principal — comunica a ponte entre desejo e compra em uma frase só. "She finds it so you don't have to." funciona bem como linha de bio/CTA.</p>
 </section>
 
-<!-- ============ PÚBLICO ============ -->
-<section id="publico">
-  <div class="kicker">04 · Cliente ideal</div>
-  <h2>Mulheres de 30 a 55 anos no sul da Flórida, com dinheiro e sem sistema de imagem.</h2>
-  <p class="lede">Miami-Dade, Broward e Palm Beach. Brasileiras, latinas e americanas — empresárias, profissionais liberais, realtors, executivas e mulheres em transição de vida.</p>
-
-  <div class="grid grid-3" style="margin-top:48px;">
-    <div class="card">
-      <h3>A Executiva em Reinvenção</h3>
-      <dl style="margin-top:14px; font-size:14px; color:var(--ink-soft);">
-        <p><b style="color:var(--ink);">Dor:</b> divórcio, promoção ou mudança de carreira recente — o guarda-roupa não representa quem ela é agora.</p><br>
-        <p><b style="color:var(--ink);">Desejo:</b> ser vista como confiante e no controle, sem parecer que está tentando demais.</p><br>
-        <p><b style="color:var(--ink);">Objeção:</b> "isso vai parecer realmente comigo?"</p><br>
-        <p><b style="color:var(--ink);">Serviço ideal:</b> Image Reinvention · VIP Style Experience.</p><br>
-        <p><b style="color:var(--ink);">Conteúdo que atrai:</b> transformações antes/depois, "what I would wear to lead a room".</p>
-      </dl>
-    </div>
-    <div class="card">
-      <h3>A Brasileira em Miami</h3>
-      <dl style="margin-top:14px; font-size:14px; color:var(--ink-soft);">
-        <p><b style="color:var(--ink);">Dor:</b> mudou para a Flórida e não sabe adaptar o guarda-roupa brasileiro ao clima, cultura e ritmo americano.</p><br>
-        <p><b style="color:var(--ink);">Desejo:</b> pertencimento — se vestir como quem já pertence ao novo país, sem perder identidade.</p><br>
-        <p><b style="color:var(--ink);">Objeção:</b> "em dólar isso é caro, eu resolvo sozinha."</p><br>
-        <p><b style="color:var(--ink);">Serviço ideal:</b> Closet Edit · Personal Shopping.</p><br>
-        <p><b style="color:var(--ink);">Conteúdo que atrai:</b> conteúdo bilíngue, "o que vestir no verão da Flórida", achadinhos com curadoria.</p>
-      </dl>
-    </div>
-    <div class="card">
-      <h3>A Profissional de Armário Cheio</h3>
-      <dl style="margin-top:14px; font-size:14px; color:var(--ink-soft);">
-        <p><b style="color:var(--ink);">Dor:</b> realtor, médica ou executiva com armário cheio e a sensação de "não tenho nada para vestir".</p><br>
-        <p><b style="color:var(--ink);">Desejo:</b> uma imagem que finalmente combine com o cargo que ela já conquistou.</p><br>
-        <p><b style="color:var(--ink);">Objeção:</b> "eu já tenho roupa suficiente."</p><br>
-        <p><b style="color:var(--ink);">Serviço ideal:</b> Style SOS · Closet Edit.</p><br>
-        <p><b style="color:var(--ink);">Conteúdo que atrai:</b> closet rescue, montar looks com o que ela já tem.</p>
-      </dl>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PRODUTOS ============ -->
-<section id="produtos">
-  <div class="kicker">05 · Escada de produtos</div>
-  <h2>Uma oferta clara. Não quinze.</h2>
-  <p class="lede">Um produto de entrada, um intermediário, um hero offer premium — o resto vira upsell natural dentro da jornada.</p>
-
-  <div class="grid grid-3" style="margin-top:48px;">
-    <div class="card">
-      <div class="pill">Entrada</div>
-      <h3 style="margin-top:14px;">Style SOS</h3>
-      <p style="margin-top:8px; font-size:28px; font-family:var(--serif); color:var(--ink);">$147</p>
-      <p style="margin-top:10px;">Consultoria online de 45 minutos. Baixo compromisso, resolve uma dor pontual, primeira experiência paga com Christiane.</p>
-    </div>
-    <div class="card">
-      <div class="pill">Intermediário</div>
-      <h3 style="margin-top:14px;">Image Reinvention</h3>
-      <p style="margin-top:8px; font-size:28px; font-family:var(--serif); color:var(--ink);">$1,497</p>
-      <p style="margin-top:10px;">Diagnóstico completo de imagem + closet strategy + direcionamento de compras. O passo entre o Style SOS e a experiência completa.</p>
-    </div>
-    <div class="card" style="border-color:var(--accent); background:var(--bg-panel);">
-      <div class="pill" style="border-color:var(--accent); color:var(--accent);">Hero Offer</div>
-      <h3 style="margin-top:14px;">VIP Style Experience</h3>
-      <p style="margin-top:8px; font-size:28px; font-family:var(--serif); color:var(--ink);">$2,500–3,500</p>
-      <p style="margin-top:10px;">Um dia inteiro de transformação — personal shopping guiado, styling e lookbook digital. A oferta que carrega a marca.</p>
-    </div>
-  </div>
-
-  <div style="margin-top:32px;">
-    <p style="font-size:14px;"><b style="color:var(--ink);">Complementos e upsell:</b> Digital Style Guide ($37, produto passivo/escalável) · Personal Shopping avulso ($750–1,200) · Closet Edit ($597) · Corporate / Executive Image (a partir de $2,500) · seasonal wardrobe refresh para clientes recorrentes.</p>
-  </div>
-</section>
-
-<!-- ============ HERO OFFER ============ -->
-<section id="hero-offer">
-  <div class="kicker">06 · O hero offer, em detalhe</div>
-  <h2>VIP Style Experience</h2>
-  <p class="lede">A promessa: chega de abrir o closet e sentir que não tem nada para vestir. Em uma experiência guiada, Christiane constrói a imagem que já representa quem a cliente se tornou.</p>
+<!-- ============ MOTORES ============ -->
+<section id="motores">
+  <div class="kicker">04 · Modelo de negócio</div>
+  <h2>Quatro motores de receita, não um só.</h2>
 
   <div class="grid grid-2" style="margin-top:44px;">
     <div class="card">
-      <h3>Entregáveis</h3>
-      <ul style="margin:14px 0 0; padding-left:18px; color:var(--ink-soft); font-size:14.5px;">
-        <li>Style Discovery call</li>
-        <li>Image & Lifestyle Assessment</li>
-        <li>Closet Strategy session</li>
-        <li>Personal Shopping guiado (Design District / Bal Harbour / Boca — conforme perfil)</li>
-        <li>Styling completo + criação de looks</li>
-        <li>Digital Lookbook personalizado</li>
-        <li>14 dias de suporte via WhatsApp</li>
-      </ul>
+      <div class="pill">Engine 01</div>
+      <h3 style="margin-top:14px;">Affiliate Commerce</h3>
+      <p style="margin-top:10px; font-size:14px;">SHEIN e outras plataformas elegíveis. Conteúdo: provador, try-on, reviews, looks, collections, seasonal finds. Receita: comissões de afiliado, creator codes, campanhas de marca.</p>
     </div>
     <div class="card">
-      <h3>Diferenciais</h3>
-      <ul style="margin:14px 0 0; padding-left:18px; color:var(--ink-soft); font-size:14.5px;">
-        <li>Experiência local — conhecimento real de South Florida, não um curso genérico</li>
-        <li>Atendimento bilíngue (PT/EN)</li>
-        <li>Curadoria feita ao vivo com a cliente, não uma lista de links</li>
-        <li>Documentação em foto/vídeo (com autorização) vira prova social</li>
-        <li>Sem certificações inventadas — a autoridade vem da experiência prática e do olhar de Christiane</li>
-      </ul>
+      <div class="pill">Engine 02</div>
+      <h3 style="margin-top:14px;">Florida Outlet Finds</h3>
+      <p style="margin-top:10px; font-size:14px;">Visitas a outlets viram conteúdo (Outlet Hunt, Under $100, Worth It or Not?). Monetização: affiliate quando disponível, listas de compra curadas, fee de personal shopping quando fizer sentido, e revenda direta apenas se validada jurídica e operacionalmente com cada varejista.</p>
+    </div>
+    <div class="card">
+      <div class="pill">Engine 03</div>
+      <h3 style="margin-top:14px;">Curated Product Drops — Chris Picks</h3>
+      <p style="margin-top:10px; font-size:14px;">Drops pequenos e limitados (10–20 produtos por drop). Uso de pré-venda/waitlist para validar demanda antes de comprar estoque. Ciclo: teaser → waitlist → drop → urgência → sold out → restock.</p>
+    </div>
+    <div class="card">
+      <div class="pill">Engine 04</div>
+      <h3 style="margin-top:14px;">Brand Partnerships</h3>
+      <p style="margin-top:10px; font-size:14px;">UGC, conteúdo patrocinado, brand deals, parcerias locais com boutiques e negócios de beleza/lifestyle. Objetivo: vender às marcas não "seguidores", mas "produtos movidos".</p>
     </div>
   </div>
 
-  <div class="divider"></div>
-  <div class="grid grid-2">
-    <div><h3>Valor percebido</h3><p style="margin-top:10px;">Somando os componentes separadamente, a experiência representa mais de $4,000 em valor de mercado — entregue como um pacote único de $2,500 a $3,500, dependendo do escopo de shopping e localização.</p></div>
-    <div><h3>Upsell natural</h3><p style="margin-top:10px;">Corporate/Executive Image add-on, wardrobe refresh sazonal, e "traga uma amiga" com desconto de concierge — gerando indicação sem precisar de desconto agressivo no serviço principal.</p></div>
-  </div>
+  <div class="callout" style="margin-top:32px;">Importante: nem todo varejista permite revenda ou uso comercial de produto. Isso precisa ser validado caso a caso antes de qualquer operação de revenda direta — tratado aqui como hipótese a confirmar, não como modelo já aprovado.</div>
 </section>
 
-<!-- ============ RECEITA ============ -->
-<section id="receita">
-  <div class="kicker">07 · Arquitetura de $50K/mês</div>
-  <h2>$50K/month is not a follower goal. It is a revenue architecture.</h2>
-  <p class="lede">Não é promessa — é matemática de negócio. Três cenários possíveis, com capacidade operacional real considerada em cada um. <i>Hipótese de trabalho a validar com dados reais de conversão nos primeiros 90 dias.</i></p>
+<!-- ============ META $50K ============ -->
+<section id="meta50k">
+  <div class="kicker">05 · A meta de $50K — com precisão financeira</div>
+  <h2>GMV não é receita. Receita não é lucro.</h2>
+  <p class="lede">$50K em produtos vendidos não é $50K de renda pessoal. Antes dos cenários, os termos que vamos usar o tempo todo:</p>
 
-  <div class="card" style="margin-top:44px;">
-    <div class="scenario-head"><h3>Cenário A — Volume</h3><div class="scenario-total">≈ $50.3K</div></div>
+  <div class="table-wrap" style="margin-top:32px;"><table class="def-table">
+    <tbody>
+      <tr><td>GMV</td><td>Valor total de produtos vendidos através dos links/drops de Christiane — volume, não receita.</td></tr>
+      <tr><td>Revenue</td><td>Dinheiro que efetivamente entra no negócio: comissões + vendas de drops + brand deals + fees.</td></tr>
+      <tr><td>Gross Profit</td><td>Receita menos o custo direto do produto vendido (COGS) — relevante principalmente para os drops.</td></tr>
+      <tr><td>Net Profit</td><td>Lucro bruto menos custos operacionais (ferramentas, ads, equipe, frete, taxas de plataforma).</td></tr>
+      <tr><td>Affiliate Commission</td><td>Percentual pago pela plataforma sobre vendas geradas pelos links de Christiane — sem custo de produto.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="divider"></div>
+
+  <div class="card">
+    <div class="scenario-head"><h3>Cenário 1 — $50K Monthly GMV</h3><div class="scenario-total">≈ $54.6K GMV</div></div>
     <div class="table-wrap"><table>
-      <thead><tr><th>Oferta</th><th class="num">Qtd.</th><th class="num">Ticket</th><th class="num">Subtotal</th></tr></thead>
+      <thead><tr><th>Fonte</th><th class="num">Volume</th><th class="num">Ticket médio</th><th class="num">GMV</th></tr></thead>
       <tbody>
-        <tr><td>Style SOS</td><td class="num">25</td><td class="num">$147</td><td class="num">$3,675</td></tr>
-        <tr><td>Digital Style Guide + Blueprint</td><td class="num">15</td><td class="num">$297</td><td class="num">$4,455</td></tr>
-        <tr><td>Closet Edit</td><td class="num">12</td><td class="num">$597</td><td class="num">$7,164</td></tr>
-        <tr><td>Personal Shopping</td><td class="num">10</td><td class="num">$950</td><td class="num">$9,500</td></tr>
-        <tr><td>Image Reinvention</td><td class="num">10</td><td class="num">$1,497</td><td class="num">$14,970</td></tr>
-        <tr><td>VIP Style Experience</td><td class="num">3</td><td class="num">$3,000</td><td class="num">$9,000</td></tr>
-        <tr><td>Digital passivo</td><td class="num">—</td><td class="num">—</td><td class="num">$1,500</td></tr>
+        <tr><td>Affiliate / outlet finds</td><td class="num">650 pedidos</td><td class="num">$60</td><td class="num">$39,000</td></tr>
+        <tr><td>Chris Picks (2 drops)</td><td class="num">240 unidades</td><td class="num">$65</td><td class="num">$15,600</td></tr>
       </tbody>
-      <tfoot><tr><td colspan="3">Total</td><td class="num">≈ $50,264</td></tr></tfoot>
+      <tfoot><tr><td colspan="3">GMV total</td><td class="num">≈ $54,600</td></tr></tfoot>
     </table></div>
-    <div class="capacity">75 atendimentos/mês · ≈ 213 horas de entrega/mês (~53h/semana). Só é sustentável com uma assistente de styling ou parte do volume operado por uma segunda pessoa a partir do mês 3–4.</div>
+    <div class="capacity">Receita real gerada por esse GMV: comissão de afiliado (~12% sobre $39K) ≈ $4,680 + lucro bruto dos drops (~45% sobre $15,6K) ≈ $7,020. <b style="color:var(--ink);">Receita real ≈ $11,700</b> — a lição principal deste cenário é que $50K em GMV é ótimo para negociar com marcas, mas não é o dinheiro que entra no bolso.</div>
   </div>
 
   <div class="card" style="margin-top:24px; border-color:var(--accent);">
-    <div class="scenario-head"><h3>Cenário B — Equilibrado</h3><div class="scenario-total">≈ $48.6K</div></div>
+    <div class="scenario-head"><h3>Cenário 2 — $50K Monthly Business Revenue</h3><div class="scenario-total">≈ $52.6K</div></div>
     <div class="table-wrap"><table>
-      <thead><tr><th>Oferta</th><th class="num">Qtd.</th><th class="num">Ticket</th><th class="num">Subtotal</th></tr></thead>
+      <thead><tr><th>Fonte</th><th class="num">Base</th><th class="num">Detalhe</th><th class="num">Receita</th></tr></thead>
       <tbody>
-        <tr><td>Style SOS</td><td class="num">14</td><td class="num">$147</td><td class="num">$2,058</td></tr>
-        <tr><td>Digital Style Guide + Blueprint</td><td class="num">8</td><td class="num">$297</td><td class="num">$2,376</td></tr>
-        <tr><td>Closet Edit</td><td class="num">6</td><td class="num">$597</td><td class="num">$3,582</td></tr>
-        <tr><td>Personal Shopping</td><td class="num">8</td><td class="num">$950</td><td class="num">$7,600</td></tr>
-        <tr><td>Image Reinvention</td><td class="num">9</td><td class="num">$1,497</td><td class="num">$13,473</td></tr>
-        <tr><td>VIP Style Experience</td><td class="num">5</td><td class="num">$3,000</td><td class="num">$15,000</td></tr>
-        <tr><td>Brand / afiliados / digital</td><td class="num">—</td><td class="num">—</td><td class="num">$4,500</td></tr>
+        <tr><td>Affiliate commission</td><td class="num">≈$180K GMV</td><td class="num">~12% blended</td><td class="num">$21,600</td></tr>
+        <tr><td>Chris Picks (3 drops)</td><td class="num">450 unidades</td><td class="num">$60 avg</td><td class="num">$27,000</td></tr>
+        <tr><td>Brand partnerships</td><td class="num">2 deals</td><td class="num">$3,500 cada</td><td class="num">$7,000</td></tr>
       </tbody>
-      <tfoot><tr><td colspan="3">Total</td><td class="num">≈ $48,589</td></tr></tfoot>
+      <tfoot><tr><td colspan="3">Receita total</td><td class="num">≈ $55,600</td></tr></tfoot>
     </table></div>
-    <div class="capacity">50 atendimentos/mês · ≈ 176 horas de entrega/mês (~44h/semana). Cenário mais realista para o início — falta $1,4K para bater $50K, cobertos com uma indicação extra ou upsell no mês.</div>
+    <div class="capacity">Isto é receita bruta do negócio — ainda não desconta o custo do produto dos drops nem custos operacionais. Exige volume de conteúdo maior (5–6 Reels/semana) e uma base de audiência mais engajada do que a atual.</div>
   </div>
 
   <div class="card" style="margin-top:24px;">
-    <div class="scenario-head"><h3>Cenário C — Premium / Boutique</h3><div class="scenario-total">≈ $50.4K</div></div>
+    <div class="scenario-head"><h3>Cenário 3 — Caminho futuro para $50K Gross Profit</h3><div class="scenario-total">12–18 meses</div></div>
     <div class="table-wrap"><table>
-      <thead><tr><th>Oferta</th><th class="num">Qtd.</th><th class="num">Ticket</th><th class="num">Subtotal</th></tr></thead>
+      <thead><tr><th>Fonte</th><th class="num">Receita</th><th class="num">Margem</th><th class="num">Lucro bruto</th></tr></thead>
       <tbody>
-        <tr><td>VIP Style Experience</td><td class="num">6</td><td class="num">$3,200</td><td class="num">$19,200</td></tr>
-        <tr><td>Image Reinvention</td><td class="num">8</td><td class="num">$1,497</td><td class="num">$11,976</td></tr>
-        <tr><td>Personal Shopping</td><td class="num">6</td><td class="num">$1,000</td><td class="num">$6,000</td></tr>
-        <tr><td>Corporate / Executive Image</td><td class="num">4</td><td class="num">$2,750</td><td class="num">$11,000</td></tr>
-        <tr><td>Digital Style Guide (passivo)</td><td class="num">60</td><td class="num">$37</td><td class="num">$2,220</td></tr>
+        <tr><td>Affiliate commission</td><td class="num">$15,000</td><td class="num">~100%</td><td class="num">$15,000</td></tr>
+        <tr><td>Chris Picks (6 drops)</td><td class="num">$84,000</td><td class="num">~45%</td><td class="num">$37,800</td></tr>
+        <tr><td>Brand partnerships</td><td class="num">$5,500</td><td class="num">~90%</td><td class="num">$4,950</td></tr>
       </tbody>
-      <tfoot><tr><td colspan="3">Total</td><td class="num">≈ $50,396</td></tr></tfoot>
+      <tfoot><tr><td colspan="3">Lucro bruto total</td><td class="num">≈ $57,750</td></tr></tfoot>
     </table></div>
-    <div class="capacity">24 atendimentos de alto contato/mês · ≈ 164 horas/mês (~41h/semana). O cenário mais sustentável a longo prazo — menos clientes, ticket mais alto, mais espaço para conteúdo e vida pessoal.</div>
+    <div class="capacity">Este é um alvo de longo prazo, não do primeiro trimestre — depende de escalar drops com margem real (o que exige capital de giro e gestão de estoque), mais volume de conteúdo e uma equipe operacional. <b style="color:var(--ink);">Lucro bruto ainda não é lucro líquido:</b> frete, devoluções, ferramentas/CRM, mídia paga, taxas de plataforma e equipe reduzem esse número — a modelagem de net profit só faz sentido depois que a estrutura de custo estiver definida, por volta do mês 6.</div>
   </div>
 </section>
 
 <!-- ============ PILARES ============ -->
 <section id="pilares">
-  <div class="kicker">08 · Os 5 pilares de conteúdo</div>
-  <h2>Cada pilar cumpre um papel diferente no funil.</h2>
+  <div class="kicker">06 · Os 7 pilares de conteúdo</div>
+  <h2>Todo conteúdo cumpre pelo menos uma função: reach, trust, desire, conversion ou retention.</h2>
 
   <div class="grid grid-2" style="margin-top:44px; gap:20px;">
-    <div class="card">
-      <h3>1 · Style Authority</h3>
-      <p style="margin-top:10px; font-size:14.5px;"><b>Objetivo:</b> educação e expertise.<br><b>Formatos:</b> Reels explicativos, carrosséis.<br><b>Frequência:</b> 2x/semana.<br><b>Exemplo:</b> "3 things making your outfit look cheaper."<br><b>CTA:</b> "Comment STYLE for my free checklist."<br><b>KPI:</b> saves, compartilhamentos.</p>
-    </div>
-    <div class="card">
-      <h3>2 · Fitting Room / Achadinhos</h3>
-      <p style="margin-top:10px; font-size:14.5px;"><b>Objetivo:</b> manter o alcance que já funciona.<br><b>Formatos:</b> Reels de provador rápido.<br><b>Frequência:</b> 2x/semana.<br><b>Exemplo:</b> provadores Zara/Mango com preço.<br><b>CTA:</b> "Follow for daily finds."<br><b>KPI:</b> alcance, novos seguidores.</p>
-    </div>
-    <div class="card">
-      <h3>3 · South Florida Style</h3>
-      <p style="margin-top:10px; font-size:14.5px;"><b>Objetivo:</b> ancorar a marca no território.<br><b>Formatos:</b> Reels em locais icônicos.<br><b>Frequência:</b> 1x/semana.<br><b>Exemplo:</b> "What I would wear for dinner in Bal Harbour."<br><b>CTA:</b> "Save this for your next Miami look."<br><b>KPI:</b> profile visits.</p>
-    </div>
-    <div class="card">
-      <h3>4 · Transformations</h3>
-      <p style="margin-top:10px; font-size:14.5px;"><b>Objetivo:</b> prova social.<br><b>Formatos:</b> antes/depois, closet reveal.<br><b>Frequência:</b> 1x/semana.<br><b>Exemplo:</b> transformação de cliente real.<br><b>CTA:</b> "DM STYLE to start yours."<br><b>KPI:</b> DMs, leads.</p>
-    </div>
-    <div class="card" style="grid-column:1/-1;">
-      <h3>5 · Christiane / Personal Brand</h3>
-      <p style="margin-top:10px; font-size:14.5px;"><b>Objetivo:</b> conexão e confiança.<br><b>Formatos:</b> Stories, bastidores, opiniões sobre moda, vida na Flórida.<br><b>Frequência:</b> diário em Stories, 1x/semana em Reels.<br><b>Exemplo:</b> rotina de um dia de personal shopping.<br><b>CTA:</b> engajamento direto (perguntas, enquetes).<br><b>KPI:</b> respostas em Stories, sentimento de marca.</p>
-    </div>
+    <div class="card"><h3>1 · Try-On / Provador</h3><p style="margin-top:10px; font-size:14px;"><b>Formato:</b> Reel rápido · <b>Freq.:</b> 2x/semana · <b>CTA:</b> "Comment LINK" · <b>Monetização:</b> affiliate · <b>KPI:</b> cliques no link.</p></div>
+    <div class="card"><h3>2 · Florida Finds</h3><p style="margin-top:10px; font-size:14px;"><b>Formato:</b> Reel em locação · <b>Freq.:</b> 1x/semana · <b>CTA:</b> "Save this find" · <b>Monetização:</b> affiliate + fee ocasional · <b>KPI:</b> saves.</p></div>
+    <div class="card"><h3>3 · Luxury vs Affordable</h3><p style="margin-top:10px; font-size:14px;"><b>Formato:</b> Reel comparativo · <b>Freq.:</b> 1x/semana · <b>CTA:</b> "Comment PRICE" · <b>Monetização:</b> affiliate · <b>KPI:</b> comentários.</p></div>
+    <div class="card"><h3>4 · How I Would Style It</h3><p style="margin-top:10px; font-size:14px;"><b>Formato:</b> Reel/carrossel · <b>Freq.:</b> 1x/semana · <b>CTA:</b> "DM STYLE IT" · <b>Monetização:</b> affiliate · <b>KPI:</b> DMs.</p></div>
+    <div class="card"><h3>5 · South Florida Lifestyle</h3><p style="margin-top:10px; font-size:14px;"><b>Formato:</b> Stories + Reel · <b>Freq.:</b> diário em Stories · <b>CTA:</b> engajamento direto · <b>Monetização:</b> indireta (trust) · <b>KPI:</b> respostas.</p></div>
+    <div class="card"><h3>6 · Chris Picks / Drops</h3><p style="margin-top:10px; font-size:14px;"><b>Formato:</b> Reel + Stories de campanha · <b>Freq.:</b> por lançamento de drop · <b>CTA:</b> "Join the waitlist" · <b>Monetização:</b> venda direta · <b>KPI:</b> waitlist + conversão.</p></div>
+    <div class="card" style="grid-column:1/-1;"><h3>7 · Personal Brand / Christiane</h3><p style="margin-top:10px; font-size:14px;"><b>Formato:</b> Stories, bastidores · <b>Freq.:</b> diário · <b>CTA:</b> conexão · <b>Monetização:</b> retenção de audiência · <b>KPI:</b> sentimento de marca, replies.</p></div>
   </div>
 </section>
 
-<!-- ============ SÉRIES + CALENDÁRIO ============ -->
+<!-- ============ SÉRIES ============ -->
 <section id="series">
-  <div class="kicker">09 · Séries proprietárias & calendário</div>
-  <h2>Formatos reconhecíveis, repetidos toda semana.</h2>
-  <p class="lede">A pessoa deve bater o olho e reconhecer: "essa é uma série da Chris."</p>
+  <div class="kicker">07 · Séries proprietárias</div>
+  <h2>Formatos com identidade editorial própria.</h2>
+  <div class="tag-row" style="margin-top:28px;">
+    <span class="pill">Chris Found It</span>
+    <span class="pill">Florida Finds</span>
+    <span class="pill">Outlet Hunt</span>
+    <span class="pill">Luxury vs Real Life</span>
+    <span class="pill">Look for Less</span>
+    <span class="pill">Under $100</span>
+    <span class="pill">Worth It or Not?</span>
+    <span class="pill">Chris Picks</span>
+    <span class="pill">Designer Look for Less</span>
+    <span class="pill">Miami Look for Less</span>
+  </div>
+</section>
+
+<!-- ============ SOUTH FLORIDA ENGINE ============ -->
+<section id="southflorida">
+  <div class="kicker">08 · South Florida content engine</div>
+  <h2>Design District e Bal Harbour vendem o sonho. O outlet vende a solução.</h2>
+  <p class="lede">A narrativa: aspiração → descoberta → alternativa acessível → compra. Um look de $3,000 visto em Bal Harbour vira "let's recreate this Miami look for under $250" no outlet ou na SHEIN.</p>
 
   <div class="tag-row" style="margin-top:28px;">
-    <span class="pill">Miami Style Audit</span>
-    <span class="pill">Luxury vs. Affordable</span>
-    <span class="pill">What I Would Wear</span>
-    <span class="pill">Chris, Fix My Look</span>
-    <span class="pill">Closet Rescue</span>
-    <span class="pill">$300 vs $3,000 Look</span>
-    <span class="pill">Stylist Goes Shopping</span>
+    <span class="pill">Miami Design District</span>
+    <span class="pill">Bal Harbour</span>
+    <span class="pill">Sawgrass Mills</span>
+    <span class="pill">Aventura</span>
+    <span class="pill">Las Olas</span>
+    <span class="pill">Boca Raton</span>
+    <span class="pill">Worth Avenue · Palm Beach</span>
   </div>
 
-  <div class="divider"></div>
-  <h3 style="margin-bottom:20px;">Calendário semanal</h3>
-  <div class="table-wrap"><table>
-    <thead><tr><th>Dia</th><th>Pilar</th><th>Formato</th><th>CTA</th></tr></thead>
+  <div class="flow" style="margin-top:36px;">
+    <div class="flow-step">Aspiration <span style="color:var(--ink-soft); font-weight:400;">— Design District / Bal Harbour</span></div><div class="flow-arrow">↓</div>
+    <div class="flow-step">Discovery <span style="color:var(--ink-soft); font-weight:400;">— trend spotting</span></div><div class="flow-arrow">↓</div>
+    <div class="flow-step">Affordable Alternative <span style="color:var(--ink-soft); font-weight:400;">— Sawgrass / SHEIN</span></div><div class="flow-arrow">↓</div>
+    <div class="flow-step" style="border-color:var(--accent); font-weight:600;">Purchase</div>
+  </div>
+</section>
+
+<!-- ============ FUNIL ============ -->
+<section id="funil">
+  <div class="kicker">09 · Social commerce funnel</div>
+  <h2>Cada etapa precisa ser mensurável.</h2>
+  <div class="flow" style="margin-top:36px;">
+    <div class="flow-step">Reel</div><div class="flow-arrow">↓</div>
+    <div class="flow-step">Product Desire</div><div class="flow-arrow">↓</div>
+    <div class="flow-step">Comment "LINK"</div><div class="flow-arrow">↓</div>
+    <div class="flow-step">DM Automation</div><div class="flow-arrow">↓</div>
+    <div class="flow-step">Product Page / Link</div><div class="flow-arrow">↓</div>
+    <div class="flow-step">Purchase</div><div class="flow-arrow">↓</div>
+    <div class="flow-step">CRM / Customer Data</div><div class="flow-arrow">↓</div>
+    <div class="flow-step">New Drop</div><div class="flow-arrow">↓</div>
+    <div class="flow-step" style="border-color:var(--accent); font-weight:600;">Repeat Purchase</div>
+  </div>
+  <p style="margin-top:24px; font-size:14px;"><b style="color:var(--ink);">Métricas monitoradas pela Elevra:</b> reach, cliques, DMs, visitas à página de produto, add to cart, purchase, AOV, taxa de conversão, repeat purchase, receita por conteúdo.</p>
+</section>
+
+<!-- ============ BIO ============ -->
+<section id="bio">
+  <div class="kicker">10 · Bio do Instagram — 5 opções</div>
+  <h2>A ponte entre o Reel e o clique de compra.</h2>
+  <div class="grid grid-2" style="margin-top:40px;">
+    <div class="card"><p style="font-family:var(--serif); font-size:15px; line-height:1.5; color:var(--ink);">CHRISTIANE | FLORIDA FASHION FINDS<br>Fashion · Outlets · Real Looks<br>Luxury inspiration, real-world prices<br>📍 South Florida<br>↓ Shop my finds</p></div>
+    <div class="card" style="border-color:var(--accent);"><p style="font-family:var(--serif); font-size:15px; line-height:1.5; color:var(--ink);">CHRISTIANE FREITAS<br>She finds it, so you don't have to<br>Outlets · SHEIN · Real closets<br>South Florida<br>↓ Today's finds</p></div>
+    <div class="card"><p style="font-family:var(--serif); font-size:15px; line-height:1.5; color:var(--ink);">Chris 🤍 Fashion Finds<br>Real looks. Real prices. Real Florida.<br>New drops monthly — Chris Picks<br>↓ Join the waitlist</p></div>
+    <div class="card"><p style="font-family:var(--serif); font-size:15px; line-height:1.5; color:var(--ink);">CHRISTIANE | @bychrisinha<br>Fashion Creator & Product Curator<br>Outlet hunts · Luxury for less<br>South Florida, USA<br>↓ Shop the look</p></div>
+  </div>
+  <div class="card" style="margin-top:20px; background:var(--bg-panel); border:none;">
+    <p style="font-family:var(--serif); font-size:15px; line-height:1.5; color:var(--ink);">CHRISTIANE FREITAS · Fashion Finds<br>Luxury inspiration. Real-world prices.<br>Outlets · SHEIN · South Florida<br>↓ Shop my latest finds</p>
+  </div>
+</section>
+
+<!-- ============ CALENDÁRIO ============ -->
+<section id="calendario">
+  <div class="kicker">11 · Calendário semanal</div>
+  <h2>5–6 Reels/semana. Um dia de filmagem local, um dia de batch.</h2>
+  <div class="table-wrap" style="margin-top:36px;"><table>
+    <thead><tr><th>Dia</th><th>Conteúdo</th><th>Local</th><th>CTA</th><th>Monetização</th></tr></thead>
     <tbody>
-      <tr><td>Segunda</td><td>Style Authority</td><td>Reel + Carrossel</td><td>Comment STYLE</td></tr>
-      <tr><td>Terça</td><td>Fitting Room / Achadinhos</td><td>Reel</td><td>Follow for daily finds</td></tr>
-      <tr><td>Quarta</td><td>Transformations</td><td>Reel + Stories</td><td>DM STYLE</td></tr>
-      <tr><td>Quinta</td><td>South Florida Style</td><td>Reel em locação</td><td>Save this look</td></tr>
-      <tr><td>Sexta</td><td>Luxury vs Affordable</td><td>Reel</td><td>Comment PRICE</td></tr>
-      <tr><td>Sábado</td><td>Lifestyle / Experience</td><td>Stories + Carrossel</td><td>Enquete</td></tr>
-      <tr><td>Domingo</td><td>Comunidade / Q&A</td><td>Stories</td><td>Ask me anything</td></tr>
+      <tr><td>Segunda</td><td>Try-On / Provador (SHEIN)</td><td>Casa</td><td>Comment LINK</td><td>Affiliate</td></tr>
+      <tr><td>Terça</td><td>Luxury vs Affordable</td><td>Batch/estúdio</td><td>Comment PRICE</td><td>Affiliate</td></tr>
+      <tr><td>Quarta</td><td>Florida Finds</td><td>Outlet/local dia</td><td>Save this find</td><td>Affiliate + fee</td></tr>
+      <tr><td>Quinta</td><td>How I Would Style It</td><td>Casa/estúdio</td><td>DM STYLE IT</td><td>Affiliate</td></tr>
+      <tr><td>Sexta</td><td>Chris Found It / Outlet Hunt</td><td>Sawgrass ou Aventura</td><td>Follow for more finds</td><td>Affiliate</td></tr>
+      <tr><td>Sábado</td><td>South Florida Lifestyle</td><td>Locação aspiracional</td><td>Enquete em Stories</td><td>Brand awareness</td></tr>
+      <tr><td>Domingo</td><td>Comunidade / Q&A / Chris Picks teaser</td><td>Stories</td><td>Join the waitlist</td><td>Drop / retenção</td></tr>
     </tbody>
   </table></div>
-  <p style="margin-top:14px; font-size:13px;">Horários exatos devem ser testados e ajustados com o Instagram Insights real da conta — não tratar horário como verdade absoluta.</p>
+</section>
 
-  <div class="divider"></div>
-  <h3 style="margin-bottom:20px;">Framework diário de Stories</h3>
-  <div class="grid grid-4">
-    <div class="card"><div class="pill">Manhã</div><p style="margin-top:12px; font-size:14px;">Conexão humana — bom dia, rotina, bastidores.</p></div>
-    <div class="card"><div class="pill">Meio-dia</div><p style="margin-top:12px; font-size:14px;">Autoridade — dica rápida, bastidor de trabalho.</p></div>
-    <div class="card"><div class="pill">Tarde</div><p style="margin-top:12px; font-size:14px;">Fashion — outfit do dia, cliente, produto.</p></div>
-    <div class="card"><div class="pill">Noite</div><p style="margin-top:12px; font-size:14px;">Engajamento — enquete, pergunta, CTA de DM.</p></div>
+<!-- ============ SHOPPING DAY ============ -->
+<section id="shoppingday">
+  <div class="kicker">12 · Shopping day content system</div>
+  <h2>Uma visita ao outlet vira 10 a 20 conteúdos.</h2>
+  <div class="grid grid-3" style="margin-top:40px;">
+    <div class="protocol-col">
+      <h4>Antes de entrar</h4>
+      <ul><li>Definir 3 séries do dia (ex: Outlet Hunt + Under $100 + Worth It or Not?)</li><li>Checar bateria, luz e microfone</li><li>Lista de categorias a procurar (ex: vestidos, blazers, acessórios)</li></ul>
+    </div>
+    <div class="protocol-col">
+      <h4>Durante</h4>
+      <ul><li>B-roll da loja e das araras</li><li>Provador com preço na tela</li><li>Comparação de preço vs. referência de luxo</li><li>Stories em tempo real da caça</li></ul>
+    </div>
+    <div class="protocol-col">
+      <h4>Depois</h4>
+      <ul><li>Selecionar os 5–8 melhores momentos para Reels</li><li>Organizar por série (Outlet Hunt, Florida Finds, etc.)</li><li>Publicar Stories de bastidor no mesmo dia, Reels ao longo da semana</li><li>Follow-up: link/lista de compra na bio ou DM</li></ul>
+    </div>
   </div>
-  <p style="margin-top:16px; font-size:14px;">Recursos: polls, "this or that", "rate this look", "choose tomorrow's outfit", DM keyword, behind the scenes — o objetivo é transformar seguidor passivo em conversa por DM.</p>
 </section>
 
 <!-- ============ 30 REELS ============ -->
 <section id="reels">
-  <div class="kicker">10 · 30 ideias de reels</div>
-  <h2>Prontos para gravar — não "faça conteúdo educativo".</h2>
-  <div class="grid grid-3" style="margin-top:40px;">
+  <div class="kicker">13 · 30 reels completos</div>
+  <h2>Hook, conceito, local, shot list, roteiro, ângulo de produto, CTA e monetização — prontos para gravar.</h2>
 
-    <div class="mini-card"><div class="n">01 · Luxury vs Affordable</div><div class="hook">"This outfit costs $4,800. Let me recreate it for $280."</div><span class="row"><b>Local:</b> Bal Harbour</span><span class="row"><b>Dev.:</b> mostra a referência → seleciona alternativas → monta o look → comparação lado a lado.</span><span class="row"><b>CTA:</b> "Comment LOOK and I'll send my Style Assessment."</span></div>
+  <div style="margin-top:40px;">
 
-    <div class="mini-card"><div class="n">02 · Style Authority</div><div class="hook">"3 things making your outfit look cheaper."</div><span class="row"><b>Local:</b> Home / closet</span><span class="row"><b>Dev.:</b> mostra os 3 erros com exemplos reais e a correção.</span><span class="row"><b>CTA:</b> "Save this before your next shopping trip."</span></div>
+    <details class="reel"><summary><span class="rn">01</span>"This $3,000 Bal Harbour look — recreated for under $250."</summary><div class="reel-body">
+      <div><b>Conceito:</b> aspiração → alternativa acessível</div>
+      <div><b>Local:</b> Bal Harbour → Sawgrass Mills</div>
+      <div class="full-row"><b>Shot list:</b> vitrine de luxo (3s) · peça de referência (3s) · corte para provador · look final montado</div>
+      <div class="full-row"><b>Roteiro:</b> "This dress is $3,000. Watch me find the exact vibe for $250." — mostra o processo de busca e o resultado lado a lado.</div>
+      <div><b>Ângulo de produto:</b> vestido/blazer de outlet</div>
+      <div><b>CTA:</b> "Comment LOOK for the link"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate link do item final</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">03 · South Florida Style</div><div class="hook">"What I would wear for dinner in Bal Harbour."</div><span class="row"><b>Local:</b> Bal Harbour</span><span class="row"><b>Dev.:</b> 3 looks para 3 tipos de jantar (casual, date, business).</span><span class="row"><b>CTA:</b> "Which one is you? Comment 1, 2 or 3."</span></div>
+    <details class="reel"><summary><span class="rn">02</span>"SHEIN try-on that actually looks expensive."</summary><div class="reel-body">
+      <div><b>Conceito:</b> desmistificar fast fashion</div>
+      <div><b>Local:</b> Casa / provador</div>
+      <div class="full-row"><b>Shot list:</b> 4 peças em sequência, preço na tela, styling rápido em cada</div>
+      <div class="full-row"><b>Roteiro:</b> "Nobody needs to know this was $18." — tom leve, confiante.</div>
+      <div><b>Ângulo de produto:</b> peças SHEIN com bom custo-benefício</div>
+      <div><b>CTA:</b> "Comment LINK for all 4"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate SHEIN</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">04 · Closet Rescue</div><div class="hook">"She said she had nothing to wear. Watch her closet."</div><span class="row"><b>Local:</b> Casa da cliente</span><span class="row"><b>Dev.:</b> closet bagunçado → edição → 5 looks montados com peças já existentes.</span><span class="row"><b>CTA:</b> "DM CLOSET to book your edit."</span></div>
+    <details class="reel"><summary><span class="rn">03</span>"Outlet Hunt: Sawgrass Mills edition."</summary><div class="reel-body">
+      <div><b>Conceito:</b> caça ao tesouro em tempo real</div>
+      <div><b>Local:</b> Sawgrass Mills</div>
+      <div class="full-row"><b>Shot list:</b> chegada, b-roll de araras, 3 achados com preço, reação genuína</div>
+      <div class="full-row"><b>Roteiro:</b> "I have 90 minutes to find the best pieces in this outlet." — formato desafio/cronômetro.</div>
+      <div><b>Ângulo de produto:</b> mix de categorias, foco no "achado surpreendente"</div>
+      <div><b>CTA:</b> "Follow for the full haul"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate + possível lista de compra curada</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">05 · Fitting Room</div><div class="hook">"Zara try-on that actually looks expensive."</div><span class="row"><b>Local:</b> Provador</span><span class="row"><b>Dev.:</b> 4 peças, preço na tela, styling rápido.</span><span class="row"><b>CTA:</b> "Follow for daily finds."</span></div>
+    <details class="reel"><summary><span class="rn">04</span>"Would you pay $49 for this? Let's find out."</summary><div class="reel-body">
+      <div><b>Conceito:</b> validação de produto com a audiência</div>
+      <div><b>Local:</b> Casa</div>
+      <div class="full-row"><b>Shot list:</b> peça em still, close nos detalhes, texto de enquete na tela</div>
+      <div class="full-row"><b>Roteiro:</b> apresenta o item e pergunta diretamente o preço que a audiência pagaria.</div>
+      <div><b>Ângulo de produto:</b> candidato a Chris Picks</div>
+      <div><b>CTA:</b> "Vote in my Stories"</div>
+      <div class="full-row"><b>Monetização:</b> pesquisa de mercado para o próximo drop</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">06 · Transformation</div><div class="hook">"From 'I don't know what to wear' to this — in one session."</div><span class="row"><b>Local:</b> Studio / casa</span><span class="row"><b>Dev.:</b> antes → processo → depois com depoimento da cliente.</span><span class="row"><b>CTA:</b> "Comment STYLE to start yours."</span></div>
+    <details class="reel"><summary><span class="rn">05</span>"Under $100: 5 pieces that don't look it."</summary><div class="reel-body">
+      <div><b>Conceito:</b> curadoria por faixa de preço</div>
+      <div><b>Local:</b> Provador / batch dia</div>
+      <div class="full-row"><b>Shot list:</b> 5 peças em sequência rápida, preço aparece no canto</div>
+      <div class="full-row"><b>Roteiro:</b> ritmo acelerado, uma peça por 2-3 segundos, corte seco.</div>
+      <div><b>Ângulo de produto:</b> mix de lojas acessíveis</div>
+      <div><b>CTA:</b> "Comment PICKS for the list"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate múltiplo</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">07 · Miami Style Audit</div><div class="hook">"I stopped 3 women in Design District to talk about their outfits."</div><span class="row"><b>Local:</b> Design District</span><span class="row"><b>Dev.:</b> abordagens rápidas + elogio genuíno + 1 dica de estilo cada.</span><span class="row"><b>CTA:</b> "Which look was your favorite?"</span></div>
+    <details class="reel"><summary><span class="rn">06</span>"Worth It or Not? Testing a viral Zara piece."</summary><div class="reel-body">
+      <div><b>Conceito:</b> review honesto de item hype</div>
+      <div><b>Local:</b> Zara / casa</div>
+      <div class="full-row"><b>Shot list:</b> unboxing/try-on, prós e contras na tela, veredito final</div>
+      <div class="full-row"><b>Roteiro:</b> tom de review sincero — o que funcionou, o que não.</div>
+      <div><b>Ângulo de produto:</b> item específico com buzz</div>
+      <div><b>CTA:</b> "Agree or disagree? Comment below"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate se aprovado</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">08 · Contrarian</div><div class="hook">"Stop buying clothes until you know this."</div><span class="row"><b>Local:</b> Closet</span><span class="row"><b>Dev.:</b> explica o conceito de "core wardrobe" antes de comprar mais.</span><span class="row"><b>CTA:</b> "Comment GUIDE for my free checklist."</span></div>
+    <details class="reel"><summary><span class="rn">07</span>"How I would style this for a Miami dinner."</summary><div class="reel-body">
+      <div><b>Conceito:</b> estilização de uma peça em contexto</div>
+      <div><b>Local:</b> Las Olas</div>
+      <div class="full-row"><b>Shot list:</b> peça base, 3 variações de styling, look final em locação</div>
+      <div class="full-row"><b>Roteiro:</b> "One dress, three ways to wear it out in Miami."</div>
+      <div><b>Ângulo de produto:</b> peça versátil (vestido ou conjunto)</div>
+      <div><b>CTA:</b> "DM STYLE IT for the full breakdown"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate da peça-base + acessórios</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">09 · $300 vs $3,000</div><div class="hook">"Same vibe, different budget — can you tell which is which?"</div><span class="row"><b>Local:</b> Boca Raton</span><span class="row"><b>Dev.:</b> dois looks lado a lado, revelação de preços no final.</span><span class="row"><b>CTA:</b> "Guess before you scroll — comment your answer."</span></div>
+    <details class="reel"><summary><span class="rn">08</span>"Chris Picks Drop 001 — the teaser."</summary><div class="reel-body">
+      <div><b>Conceito:</b> lançamento de campanha de drop</div>
+      <div><b>Local:</b> Estúdio</div>
+      <div class="full-row"><b>Shot list:</b> silhuetas desfocadas dos produtos, contagem regressiva na tela</div>
+      <div class="full-row"><b>Roteiro:</b> "I've been collecting these for weeks. Drop 001 is almost here."</div>
+      <div><b>Ângulo de produto:</b> teaser sem revelar tudo</div>
+      <div><b>CTA:</b> "Join the waitlist — link in bio"</div>
+      <div class="full-row"><b>Monetização:</b> geração de waitlist para o drop</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">10 · Personal Shopping POV</div><div class="hook">"Come personal shopping with me and a client in Aventura."</div><span class="row"><b>Local:</b> Aventura Mall</span><span class="row"><b>Dev.:</b> POV real do processo de curadoria com a cliente.</span><span class="row"><b>CTA:</b> "Want this experience? DM VIP."</span></div>
+    <details class="reel"><summary><span class="rn">09</span>"Florida Finds: what I found at Aventura Mall today."</summary><div class="reel-body">
+      <div><b>Conceito:</b> vlog de compras real</div>
+      <div><b>Local:</b> Aventura Mall</div>
+      <div class="full-row"><b>Shot list:</b> POV de caminhada, 3 lojas visitadas, achados por loja</div>
+      <div class="full-row"><b>Roteiro:</b> narrativa em primeira pessoa, tom de "vem comigo".</div>
+      <div><b>Ângulo de produto:</b> mix de lojas de shopping</div>
+      <div><b>CTA:</b> "Save this for your next mall trip"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">11 · Style Authority</div><div class="hook">"Your outfit isn't the problem. This is."</div><span class="row"><b>Local:</b> Home</span><span class="row"><b>Dev.:</b> revela o erro real (fit, cor ou proporção) por trás de um look comum.</span><span class="row"><b>CTA:</b> "Comment FIT for a free tip."</span></div>
+    <details class="reel"><summary><span class="rn">10</span>"Designer look for less: Palm Beach edition."</summary><div class="reel-body">
+      <div><b>Conceito:</b> aspiração → solução acessível</div>
+      <div><b>Local:</b> Worth Avenue → outlet</div>
+      <div class="full-row"><b>Shot list:</b> vitrine de grife, item equivalente acessível, comparação lado a lado</div>
+      <div class="full-row"><b>Roteiro:</b> "Worth Avenue said $1,200. I said no. Here's my version."</div>
+      <div><b>Ângulo de produto:</b> bolsa ou acessório</div>
+      <div><b>CTA:</b> "Comment LOOK for the link"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">12 · Achadinho</div><div class="hook">"Mango finds that look designer."</div><span class="row"><b>Local:</b> Provador</span><span class="row"><b>Dev.:</b> 3-4 peças com preços, styling rápido.</span><span class="row"><b>CTA:</b> "Save this for later."</span></div>
+    <details class="reel"><summary><span class="rn">11</span>"A or B? You choose my outfit for tonight."</summary><div class="reel-body">
+      <div><b>Conceito:</b> engajamento + validação de produto</div>
+      <div><b>Local:</b> Casa</div>
+      <div class="full-row"><b>Shot list:</b> dois looks lado a lado, votação na tela</div>
+      <div class="full-row"><b>Roteiro:</b> pergunta direta, sem enrolação — decisão rápida da audiência.</div>
+      <div><b>Ângulo de produto:</b> dois candidatos de compra</div>
+      <div><b>CTA:</b> "Vote A or B in the comments"</div>
+      <div class="full-row"><b>Monetização:</b> pesquisa de produto + affiliate do vencedor</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">13 · South Florida</div><div class="hook">"3 looks for a Miami business lunch."</div><span class="row"><b>Local:</b> Las Olas</span><span class="row"><b>Dev.:</b> looks progressivos do mais casual ao mais formal.</span><span class="row"><b>CTA:</b> "Which one fits your job? Comment below."</span></div>
+    <details class="reel"><summary><span class="rn">12</span>"Outlet Hunt: guess the price before I show you."</summary><div class="reel-body">
+      <div><b>Conceito:</b> jogo de adivinhação</div>
+      <div><b>Local:</b> Sawgrass Mills</div>
+      <div class="full-row"><b>Shot list:</b> peça em still com "?" na tela, reveal do preço</div>
+      <div class="full-row"><b>Roteiro:</b> "Guess the price before I show you — comment your number."</div>
+      <div><b>Ângulo de produto:</b> peça com preço surpreendente (pra cima ou pra baixo)</div>
+      <div><b>CTA:</b> "Comment your guess"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">14 · Transformation</div><div class="hook">"I gave her closet a system, not just new clothes."</div><span class="row"><b>Local:</b> Casa da cliente</span><span class="row"><b>Dev.:</b> mostra o método de organização + resultado.</span><span class="row"><b>CTA:</b> "DM CLOSET to book yours."</span></div>
+    <details class="reel"><summary><span class="rn">13</span>"Real closet, real girl: styling what I already own."</summary><div class="reel-body">
+      <div><b>Conceito:</b> conteúdo de conexão/lifestyle</div>
+      <div><b>Local:</b> Casa</div>
+      <div class="full-row"><b>Shot list:</b> closet real (não perfeito), 3 looks montados com peças existentes</div>
+      <div class="full-row"><b>Roteiro:</b> tom autêntico, "this is what I actually wear, not a sponsored closet."</div>
+      <div><b>Ângulo de produto:</b> nenhum direto — constrói confiança</div>
+      <div><b>CTA:</b> "Which look is your favorite?"</div>
+      <div class="full-row"><b>Monetização:</b> indireta — trust building</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">15 · Aspiração</div><div class="hook">"What women are wearing in Palm Beach right now."</div><span class="row"><b>Local:</b> Worth Avenue</span><span class="row"><b>Dev.:</b> trend report estilo editorial, com comentário de Christiane.</span><span class="row"><b>CTA:</b> "Which trend would you try?"</span></div>
+    <details class="reel"><summary><span class="rn">14</span>"Luxury vs Real Life: the $500 blazer test."</summary><div class="reel-body">
+      <div><b>Conceito:</b> comparação lado a lado de qualidade</div>
+      <div><b>Local:</b> Estúdio/casa</div>
+      <div class="full-row"><b>Shot list:</b> blazer caro e blazer acessível, close no tecido e corte</div>
+      <div class="full-row"><b>Roteiro:</b> análise honesta das diferenças reais, não só preço.</div>
+      <div><b>Ângulo de produto:</b> blazer</div>
+      <div><b>CTA:</b> "Which one would you buy?"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate da opção acessível</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">16 · Chris, Fix My Look</div><div class="hook">"She sent me her outfit. Here's what I changed."</div><span class="row"><b>Local:</b> Studio</span><span class="row"><b>Dev.:</b> foto enviada por seguidora → 3 ajustes práticos.</span><span class="row"><b>CTA:</b> "Send me yours — comment FIX ME."</span></div>
+    <details class="reel"><summary><span class="rn">15</span>"Chris Picks Drop 001 — sold out in 3 hours."</summary><div class="reel-body">
+      <div><b>Conceito:</b> prova social + urgência</div>
+      <div><b>Local:</b> Estúdio</div>
+      <div class="full-row"><b>Shot list:</b> tela de "sold out", reação genuína, agradecimento</div>
+      <div class="full-row"><b>Roteiro:</b> "You guys sold out Drop 001 in 3 hours. Here's what's coming next."</div>
+      <div><b>Ângulo de produto:</b> recap do drop</div>
+      <div><b>CTA:</b> "Join the restock waitlist"</div>
+      <div class="full-row"><b>Monetização:</b> waitlist para restock/próximo drop</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">17 · Pain</div><div class="hook">"If your closet is full but you have 'nothing to wear', watch this."</div><span class="row"><b>Local:</b> Closet</span><span class="row"><b>Dev.:</b> explica por que isso acontece + solução prática.</span><span class="row"><b>CTA:</b> "Comment CLOSET for the fix."</span></div>
+    <details class="reel"><summary><span class="rn">16</span>"Florida summer capsule: 5 pieces, 10 outfits."</summary><div class="reel-body">
+      <div><b>Conceito:</b> maximizar guarda-roupa com poucas peças</div>
+      <div><b>Local:</b> Casa / exterior</div>
+      <div class="full-row"><b>Shot list:</b> as 5 peças isoladas, depois 10 combinações rápidas</div>
+      <div class="full-row"><b>Roteiro:</b> ritmo de "outfit changes" acelerado, música em alta.</div>
+      <div><b>Ângulo de produto:</b> básicos de verão</div>
+      <div><b>CTA:</b> "Comment CAPSULE for the full list"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate das 5 peças</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">18 · Achadinho</div><div class="hook">"SHEIN pieces that don't look like SHEIN."</div><span class="row"><b>Local:</b> Provador</span><span class="row"><b>Dev.:</b> seleção cuidadosa + como estilizar para parecer premium.</span><span class="row"><b>CTA:</b> "Follow for more finds like this."</span></div>
+    <details class="reel"><summary><span class="rn">17</span>"I asked 3 women in Design District what they paid."</summary><div class="reel-body">
+      <div><b>Conceito:</b> conteúdo de rua, curiosidade</div>
+      <div><b>Local:</b> Miami Design District</div>
+      <div class="full-row"><b>Shot list:</b> abordagens rápidas, reveal de preços, reações</div>
+      <div class="full-row"><b>Roteiro:</b> formato entrevista de rua, leve e divertido.</div>
+      <div><b>Ângulo de produto:</b> tendências reais observadas</div>
+      <div><b>CTA:</b> "Which price surprised you most?"</div>
+      <div class="full-row"><b>Monetização:</b> brand awareness / possível parceria local</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">19 · Local Authority</div><div class="hook">"The unspoken dress code of Design District."</div><span class="row"><b>Local:</b> Design District</span><span class="row"><b>Dev.:</b> observações reais + como se vestir para esse ambiente.</span><span class="row"><b>CTA:</b> "Save this before your next visit."</span></div>
+    <details class="reel"><summary><span class="rn">18</span>"Should I bring this one back from the outlet?"</summary><div class="reel-body">
+      <div><b>Conceito:</b> validação de produto antes da compra</div>
+      <div><b>Local:</b> Outlet (provador)</div>
+      <div class="full-row"><b>Shot list:</b> try-on da peça, enquete na tela</div>
+      <div class="full-row"><b>Roteiro:</b> pergunta direta em tempo real dentro da loja.</div>
+      <div><b>Ângulo de produto:</b> item em consideração para Chris Picks</div>
+      <div><b>CTA:</b> "Yes or no — vote now"</div>
+      <div class="full-row"><b>Monetização:</b> pesquisa de produto para o próximo drop</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">20 · Transformation</div><div class="hook">"New job, new image — the reinvention of a Boca Raton executive."</div><span class="row"><b>Local:</b> Boca Raton</span><span class="row"><b>Dev.:</b> antes/depois com contexto da mudança de vida.</span><span class="row"><b>CTA:</b> "Starting a new chapter? DM STYLE."</span></div>
+    <details class="reel"><summary><span class="rn">19</span>"The $28 SHEIN dress everyone's been asking about."</summary><div class="reel-body">
+      <div><b>Conceito:</b> resposta a pedido da audiência</div>
+      <div><b>Local:</b> Casa</div>
+      <div class="full-row"><b>Shot list:</b> try-on completo, ângulos diferentes, veredito</div>
+      <div class="full-row"><b>Roteiro:</b> "You've been asking about this dress for weeks — here's the honest review."</div>
+      <div><b>Ângulo de produto:</b> item específico de alta demanda</div>
+      <div><b>CTA:</b> "Comment LINK"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">21 · Curiosity</div><div class="hook">"The $50 item every stylish woman in Miami owns."</div><span class="row"><b>Local:</b> Home</span><span class="row"><b>Dev.:</b> revelação do item + como usá-lo de 3 formas.</span><span class="row"><b>CTA:</b> "Comment ITEM to see where to buy it."</span></div>
+    <details class="reel"><summary><span class="rn">20</span>"Boca Raton weekend: what I wore, where I bought it."</summary><div class="reel-body">
+      <div><b>Conceito:</b> lifestyle + product discovery combinados</div>
+      <div><b>Local:</b> Boca Raton</div>
+      <div class="full-row"><b>Shot list:</b> día vlog curto, cada look com etiqueta de preço na tela</div>
+      <div class="full-row"><b>Roteiro:</b> tom de diário de fim de semana, casual.</div>
+      <div><b>Ângulo de produto:</b> múltiplos looks do dia</div>
+      <div><b>CTA:</b> "Which look is your favorite? Link for all in bio"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate múltiplo</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">22 · Bilíngue</div><div class="hook">"Como brasileira, veja o que aprendi sobre se vestir em Miami."</div><span class="row"><b>Local:</b> Aventura</span><span class="row"><b>Dev.:</b> comparação cultural + dicas práticas de adaptação.</span><span class="row"><b>CTA:</b> "Comment BRASIL se você também se mudou pra cá."</span></div>
+    <details class="reel"><summary><span class="rn">21</span>"Chris Found It: the $15 Mango piece that looks $150."</summary><div class="reel-body">
+      <div><b>Conceito:</b> achado surpreendente</div>
+      <div><b>Local:</b> Provador</div>
+      <div class="full-row"><b>Shot list:</b> peça em still, close nos detalhes que "enganam"</div>
+      <div class="full-row"><b>Roteiro:</b> reveal de preço no final, tom de "você não vai acreditar".</div>
+      <div><b>Ângulo de produto:</b> peça Mango específica</div>
+      <div><b>CTA:</b> "Comment FOUND for the link"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">23 · Personal Shopping</div><div class="hook">"If I had $1,000 to rebuild your wardrobe in Miami, this is what I'd buy."</div><span class="row"><b>Local:</b> Bal Harbour</span><span class="row"><b>Dev.:</b> lista curada com lógica de prioridade (básicos → statement pieces).</span><span class="row"><b>CTA:</b> "Want your own list? DM SHOP."</span></div>
+    <details class="reel"><summary><span class="rn">22</span>"Which one should be in Chris Picks Drop 002?"</summary><div class="reel-body">
+      <div><b>Conceito:</b> co-criação com a audiência</div>
+      <div><b>Local:</b> Estúdio</div>
+      <div class="full-row"><b>Shot list:</b> 4 produtos candidatos em sequência, enquete final</div>
+      <div class="full-row"><b>Roteiro:</b> "I'm choosing the next drop with you. Vote for your favorite."</div>
+      <div><b>Ângulo de produto:</b> candidatos ao próximo drop</div>
+      <div><b>CTA:</b> "Vote in my Stories"</div>
+      <div class="full-row"><b>Monetização:</b> validação de demanda pré-compra de estoque</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">24 · Achadinho</div><div class="hook">"5-minute outfit using only what's already in your closet."</div><span class="row"><b>Local:</b> Closet</span><span class="row"><b>Dev.:</b> desafio de styling rápido em tempo real.</span><span class="row"><b>CTA:</b> "Try this and tag me."</span></div>
+    <details class="reel"><summary><span class="rn">23</span>"Las Olas date night: recreating a $400 look."</summary><div class="reel-body">
+      <div><b>Conceito:</b> aspiração local → alternativa</div>
+      <div><b>Local:</b> Las Olas</div>
+      <div class="full-row"><b>Shot list:</b> referência de look, versão recriada, locação noturna</div>
+      <div class="full-row"><b>Roteiro:</b> "Saw this look at dinner. Built my own version for half the price."</div>
+      <div><b>Ângulo de produto:</b> conjunto de noite</div>
+      <div><b>CTA:</b> "Comment DATE NIGHT for the link"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">25 · Autoridade</div><div class="hook">"What a $2,500 image consultation actually includes."</div><span class="row"><b>Local:</b> Studio</span><span class="row"><b>Dev.:</b> transparência total sobre o processo do VIP Style Experience.</span><span class="row"><b>CTA:</b> "DM VIP for availability."</span></div>
+    <details class="reel"><summary><span class="rn">24</span>"Outlet Hunt: I only had $100 to spend."</summary><div class="reel-body">
+      <div><b>Conceito:</b> desafio de orçamento</div>
+      <div><b>Local:</b> Sawgrass Mills</div>
+      <div class="full-row"><b>Shot list:</b> contador de gastos na tela, cada compra somando ao total</div>
+      <div class="full-row"><b>Roteiro:</b> formato desafio, tensão de "vai dar certo?"</div>
+      <div><b>Ângulo de produto:</b> mix dentro do orçamento</div>
+      <div><b>CTA:</b> "Comment BUDGET for the full haul"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate múltiplo</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">26 · South Florida</div><div class="hook">"A day of styling in Las Olas — come with me."</div><span class="row"><b>Local:</b> Las Olas</span><span class="row"><b>Dev.:</b> vlog estilo bastidor de um dia de trabalho real.</span><span class="row"><b>CTA:</b> "Follow along for more days like this."</span></div>
+    <details class="reel"><summary><span class="rn">25</span>"Restocked: the piece you asked for is back."</summary><div class="reel-body">
+      <div><b>Conceito:</b> restock + urgência</div>
+      <div><b>Local:</b> Estúdio</div>
+      <div class="full-row"><b>Shot list:</b> produto de volta, contagem de estoque limitado na tela</div>
+      <div class="full-row"><b>Roteiro:</b> "You asked, it's back — but only for 48 hours."</div>
+      <div><b>Ângulo de produto:</b> item de Chris Picks anterior</div>
+      <div><b>CTA:</b> "Shop before it's gone — link in bio"</div>
+      <div class="full-row"><b>Monetização:</b> venda direta do restock</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">27 · Pain / Aspiração</div><div class="hook">"You don't need more clothes. You need a strategy."</div><span class="row"><b>Local:</b> Home</span><span class="row"><b>Dev.:</b> explica a diferença entre comprar mais e ter um sistema.</span><span class="row"><b>CTA:</b> "Comment STRATEGY for the free guide."</span></div>
+    <details class="reel"><summary><span class="rn">26</span>"What $250 actually buys you at Sawgrass Mills."</summary><div class="reel-body">
+      <div><b>Conceito:</b> transparência de orçamento real</div>
+      <div><b>Local:</b> Sawgrass Mills</div>
+      <div class="full-row"><b>Shot list:</b> recibo real na tela, cada peça mostrada com preço</div>
+      <div class="full-row"><b>Roteiro:</b> tom informativo/prático, sem exagero.</div>
+      <div><b>Ângulo de produto:</b> haul completo</div>
+      <div><b>CTA:</b> "Save this for your next outlet trip"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate múltiplo</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">28 · Transformation</div><div class="hook">"She lost 40lbs. Her closet didn't catch up. Until now."</div><span class="row"><b>Local:</b> Casa da cliente</span><span class="row"><b>Dev.:</b> processo sensível e respeitoso de reconstrução do guarda-roupa.</span><span class="row"><b>CTA:</b> "DM CLOSET to start your own."</span></div>
+    <details class="reel"><summary><span class="rn">27</span>"Miami look for less: recreating an It-girl outfit."</summary><div class="reel-body">
+      <div><b>Conceito:</b> trend translation</div>
+      <div><b>Local:</b> Miami Design District → outlet</div>
+      <div class="full-row"><b>Shot list:</b> referência de rede social, versão recriada peça a peça</div>
+      <div class="full-row"><b>Roteiro:</b> "Everyone's wearing this. Here's how to get the look for less."</div>
+      <div><b>Ângulo de produto:</b> conjunto completo</div>
+      <div><b>CTA:</b> "Comment LOOK for the breakdown"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">29 · Luxury vs Affordable</div><div class="hook">"Worth Avenue window shopping — then I built the look for less."</div><span class="row"><b>Local:</b> Worth Avenue</span><span class="row"><b>Dev.:</b> vitrine de luxo → releitura acessível.</span><span class="row"><b>CTA:</b> "Comment PALM BEACH for the full breakdown."</span></div>
+    <details class="reel"><summary><span class="rn">28</span>"Behind the scenes: how I pick what makes Chris Picks."</summary><div class="reel-body">
+      <div><b>Conceito:</b> bastidor + construção de confiança na curadoria</div>
+      <div><b>Local:</b> Casa/estúdio</div>
+      <div class="full-row"><b>Shot list:</b> mesa cheia de amostras, processo de seleção, itens descartados vs escolhidos</div>
+      <div class="full-row"><b>Roteiro:</b> "Not everything makes the cut. Here's my process."</div>
+      <div><b>Ângulo de produto:</b> processo de curadoria, não produto único</div>
+      <div><b>CTA:</b> "Join the waitlist for what's coming"</div>
+      <div class="full-row"><b>Monetização:</b> constrói confiança para o próximo drop</div>
+    </div></details>
 
-    <div class="mini-card"><div class="n">30 · Autoridade / Fechamento</div><div class="hook">"Why I stopped calling myself just a 'fashion creator'."</div><span class="row"><b>Local:</b> Studio</span><span class="row"><b>Dev.:</b> storytelling pessoal sobre a evolução para Image Consultant.</span><span class="row"><b>CTA:</b> "Comment STYLE to work with me."</span></div>
+    <details class="reel"><summary><span class="rn">29</span>"Palm Beach vs. Publix parking lot: same outfit, two worlds."</summary><div class="reel-body">
+      <div><b>Conceito:</b> humor + relatabilidade</div>
+      <div><b>Local:</b> Worth Avenue e cotidiano</div>
+      <div class="full-row"><b>Shot list:</b> mesmo look em dois cenários contrastantes</div>
+      <div class="full-row"><b>Roteiro:</b> tom leve e autoirônico, quebra a percepção de "vida perfeita".</div>
+      <div><b>Ângulo de produto:</b> peça versátil usada em ambos os cenários</div>
+      <div><b>CTA:</b> "Tag someone who needs this energy"</div>
+      <div class="full-row"><b>Monetização:</b> affiliate da peça + branding/relatabilidade</div>
+    </div></details>
+
+    <details class="reel"><summary><span class="rn">30</span>"Why I stopped just showing hauls — and started building this."</summary><div class="reel-body">
+      <div><b>Conceito:</b> storytelling de marca / fechamento de arco</div>
+      <div><b>Local:</b> Estúdio</div>
+      <div class="full-row"><b>Shot list:</b> Christiane falando direto para a câmera, cortes com bastidores dos drops e conteúdos anteriores</div>
+      <div class="full-row"><b>Roteiro:</b> "I already found what you wanted. Now I'm building the place where you can actually get it."</div>
+      <div><b>Ângulo de produto:</b> a marca como um todo — Chris Picks e a comunidade</div>
+      <div><b>CTA:</b> "Follow the journey — link in bio"</div>
+      <div class="full-row"><b>Monetização:</b> constrói marca de longo prazo, direciona para todos os motores</div>
+    </div></details>
 
   </div>
 </section>
 
-<!-- ============ 30 HOOKS ============ -->
-<section id="hooks">
-  <div class="kicker">11 · Hook library</div>
-  <h2>30 aberturas para os primeiros 1–3 segundos.</h2>
-  <div class="hook-list" style="margin-top:36px;">
-    <div class="hook-item"><span class="cat">Contrarian</span>Stop buying clothes until you know this.</div>
-    <div class="hook-item"><span class="cat">Pain</span>Your outfit isn't the problem. This is.</div>
-    <div class="hook-item"><span class="cat">Curiosity</span>Three things making your outfit look cheaper.</div>
-    <div class="hook-item"><span class="cat">Local</span>Miami women are wearing this everywhere right now.</div>
-    <div class="hook-item"><span class="cat">Aspiration</span>Before you spend $1,000 at Zara, watch this.</div>
-    <div class="hook-item"><span class="cat">Transformation</span>This is what happens when a closet finally gets a system.</div>
-    <div class="hook-item"><span class="cat">Curiosity</span>This outfit costs $4,800. I recreated it for $280.</div>
-    <div class="hook-item"><span class="cat">Pain</span>Full closet, nothing to wear — here's why that keeps happening.</div>
-    <div class="hook-item"><span class="cat">Contrarian</span>You don't need more clothes. You need a strategy.</div>
-    <div class="hook-item"><span class="cat">Local</span>The unspoken dress code of Design District.</div>
-    <div class="hook-item"><span class="cat">Aspiration</span>What I would wear for dinner in Bal Harbour.</div>
-    <div class="hook-item"><span class="cat">Transformation</span>New job, new image — watch her reinvention.</div>
-    <div class="hook-item"><span class="cat">Curiosity</span>The $50 item every stylish woman in Miami owns.</div>
-    <div class="hook-item"><span class="cat">Pain</span>If your closet is full but you feel like you have nothing, watch this.</div>
-    <div class="hook-item"><span class="cat">Local</span>What women are wearing in Palm Beach right now.</div>
-    <div class="hook-item"><span class="cat">Aspiration</span>If I had $1,000 to rebuild your wardrobe, here's what I'd buy.</div>
-    <div class="hook-item"><span class="cat">Contrarian</span>Your body isn't the problem. Your fit is.</div>
-    <div class="hook-item"><span class="cat">Curiosity</span>Same vibe, different budget — can you guess which is which?</div>
-    <div class="hook-item"><span class="cat">Transformation</span>She lost 40lbs. Her closet didn't catch up. Until now.</div>
-    <div class="hook-item"><span class="cat">Pain</span>The real reason your outfits never feel finished.</div>
-    <div class="hook-item"><span class="cat">Local</span>I stopped three women in Design District to talk about their outfits.</div>
-    <div class="hook-item"><span class="cat">Aspiration</span>What a $2,500 image consultation actually includes.</div>
-    <div class="hook-item"><span class="cat">Curiosity</span>Zara pieces that don't look like Zara.</div>
-    <div class="hook-item"><span class="cat">Contrarian</span>More clothes won't fix a wardrobe with no strategy.</div>
-    <div class="hook-item"><span class="cat">Transformation</span>From "I don't know what to wear" to this — in one session.</div>
-    <div class="hook-item"><span class="cat">Pain</span>Why your closet feels expensive but never feels finished.</div>
-    <div class="hook-item"><span class="cat">Local</span>Worth Avenue window shopping — then I built it for less.</div>
-    <div class="hook-item"><span class="cat">Aspiration</span>What I'd wear to lead a room, not just enter it.</div>
-    <div class="hook-item"><span class="cat">Curiosity</span>The one question I ask every client before we shop.</div>
-    <div class="hook-item"><span class="cat">Transformation</span>Why I stopped calling myself just a "fashion creator".</div>
-  </div>
-</section>
-
-<!-- ============ ENGAJAMENTO / LOCAL / BILÍNGUE ============ -->
+<!-- ============ ENGAJAMENTO ============ -->
 <section id="engajamento">
-  <div class="kicker">12 · Engajamento, growth local & bilíngue</div>
-  <h2>Seguidores viram clientes com sistema, não com sorte.</h2>
+  <div class="kicker">14 · Engajamento & validação de produto</div>
+  <h2>A audiência participa das decisões de compra.</h2>
+  <p class="lede">Isso é engajamento e pesquisa de produto ao mesmo tempo — reduz o risco de comprar estoque que não vende.</p>
 
-  <div class="grid grid-2" style="margin-top:44px;">
-    <div class="card">
-      <h3>Rotina de 30 min/dia</h3>
-      <ul style="margin:14px 0 0; padding-left:18px; color:var(--ink-soft); font-size:14.5px;">
-        <li>10 min antes de postar: aquecer o algoritmo respondendo comentários de outras contas do nicho</li>
-        <li>10 min depois de postar: responder todos os comentários e transformar os melhores em novo Reel</li>
-        <li>10 min à tarde: DMs, enquetes em Stories, colaboração com creators e negócios locais</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Growth local — South Florida</h3>
-      <ul style="margin:14px 0 0; padding-left:18px; color:var(--ink-soft); font-size:14.5px;">
-        <li>Geolocalização em todo post feito em Miami, Fort Lauderdale, Boca e Palm Beach</li>
-        <li>Collab posts com boutiques, salões, med spas e fotógrafos locais</li>
-        <li>Relacionamento com realtors e empreendedoras — público com poder de compra e rede de indicação</li>
-        <li>Presença em eventos e comunidades de mulheres profissionais da região</li>
-      </ul>
-    </div>
+  <div class="tag-row" style="margin-top:24px;">
+    <span class="pill">"Would you buy this?"</span>
+    <span class="pill">"A or B?"</span>
+    <span class="pill">"Guess the price."</span>
+    <span class="pill">"Should I bring this one?"</span>
+    <span class="pill">"Would you pay $49 for this?"</span>
+    <span class="pill">"Which one should be in Chris Picks?"</span>
   </div>
 
   <div class="divider"></div>
-  <h3>Estratégia bilíngue</h3>
-  <p style="margin-top:12px;">Legendas e Reels majoritariamente em inglês para captar o mercado americano e South Florida em geral; Stories e uma série semanal dedicada em português para manter a conexão com a audiência brasileira nos EUA. Espanhol pode entrar como terceira camada mais adiante, sem pressa — o mais importante agora é não deixar o perfil confuso entre os dois primeiros idiomas.</p>
-</section>
-
-<!-- ============ BIO / PERFIL / FUNIL ============ -->
-<section id="bio">
-  <div class="kicker">13 · Bio, perfil & funil de vendas</div>
-  <h2>Da bio ao pagamento — um caminho, não um labirinto.</h2>
-
-  <div class="grid grid-3" style="margin-top:44px;">
-    <div class="card">
-      <div class="pill">Premium</div>
-      <p style="margin-top:14px; font-family:var(--serif); font-size:15px; line-height:1.5; color:var(--ink);">CHRISTIANE FREITAS<br>Image & Style Consultant<br>Helping women build the image they want the world to see<br>South Florida · Miami<br>↓ Book your Style Experience</p>
-    </div>
-    <div class="card">
-      <div class="pill">Comercial</div>
-      <p style="margin-top:14px; font-family:var(--serif); font-size:15px; line-height:1.5; color:var(--ink);">CHRISTIANE FREITAS<br>Personal Styling & Closet Strategy<br>South Florida<br>Style SOS · Closet Edit · VIP Experience<br>↓ Start here</p>
-    </div>
-    <div class="card">
-      <div class="pill">Creator</div>
-      <p style="margin-top:14px; font-family:var(--serif); font-size:15px; line-height:1.5; color:var(--ink);">Chris 🤍 Fashion & Style<br>Real looks, real closets, real Miami<br>Turning "nothing to wear" into confidence<br>↓ Let's fix your closet</p>
-    </div>
-  </div>
-  <p style="margin-top:20px; font-size:14px;"><b style="color:var(--ink);">Highlights sugeridos:</b> Style Experience · Transformations · Achadinhos · South Florida · Reviews. <b style="color:var(--ink);">3 posts fixados:</b> "Who is Christiane?" · "How I can help you" · uma transformação de cliente completa.</p>
-
-  <div class="divider"></div>
-  <h3 style="margin-bottom:24px;">Funil de vendas</h3>
+  <h3 style="margin-bottom:24px;">Framework de validação de produto</h3>
   <div class="flow">
-    <div class="flow-step">Reel</div><div class="flow-arrow">↓</div>
-    <div class="flow-step">CTA no vídeo</div><div class="flow-arrow">↓</div>
-    <div class="flow-step">Comment "STYLE"</div><div class="flow-arrow">↓</div>
-    <div class="flow-step">Automação de DM</div><div class="flow-arrow">↓</div>
-    <div class="flow-step">Style Quiz</div><div class="flow-arrow">↓</div>
-    <div class="flow-step">Lead qualificado no CRM</div><div class="flow-arrow">↓</div>
-    <div class="flow-step">Call ou compra direta</div><div class="flow-arrow">↓</div>
-    <div class="flow-step">Serviço entregue</div><div class="flow-arrow">↓</div>
-    <div class="flow-step">Upsell + depoimento</div><div class="flow-arrow">↓</div>
-    <div class="flow-step" style="border-color:var(--accent); font-weight:600;">Conteúdo + indicação</div>
+    <div class="flow-step">Discover</div><div class="flow-arrow">↓</div>
+    <div class="flow-step">Show</div><div class="flow-arrow">↓</div>
+    <div class="flow-step">Ask</div><div class="flow-arrow">↓</div>
+    <div class="flow-step">Measure</div><div class="flow-arrow">↓</div>
+    <div class="flow-step">Buy</div><div class="flow-arrow">↓</div>
+    <div class="flow-step">Sell</div><div class="flow-arrow">↓</div>
+    <div class="flow-step" style="border-color:var(--accent); font-weight:600;">Reorder</div>
   </div>
+  <p style="margin-top:20px; font-size:14px;">Usar Stories, enquetes, waitlists, DMs e pré-vendas antes de comprar estoque relevante — o objetivo é minimizar dead inventory.</p>
 </section>
 
-<!-- ============ PAPÉIS / TECNOLOGIA ============ -->
+<!-- ============ PAPÉIS ============ -->
 <section id="papeis">
-  <div class="kicker">14 · Papéis & tecnologia</div>
-  <h2>Christiane cria a autoridade. Elevra constrói o motor de crescimento.</h2>
+  <div class="kicker">15 · Papel da Elevra — Commerce Growth Partner</div>
+  <h2>Christiane encontra. A Elevra constrói o sistema que vende.</h2>
 
   <div class="grid grid-2" style="margin-top:44px;">
     <div class="card">
       <h3>Christiane</h3>
-      <ul style="margin:14px 0 0; padding-left:18px; color:var(--ink-soft); font-size:14.5px;">
-        <li>Expertise em styling e imagem</li>
-        <li>Presença de câmera</li>
-        <li>Experiência da cliente</li>
-        <li>Relacionamentos locais</li>
+      <ul style="margin:14px 0 0; padding-left:18px; color:var(--ink-soft); font-size:14px;">
+        <li>Câmera e personalidade</li>
+        <li>Descoberta de moda e seleção de produto</li>
+        <li>Try-ons e lifestyle</li>
+        <li>Relacionamento com a audiência</li>
       </ul>
     </div>
     <div class="card">
       <h3>Elevra Digital</h3>
-      <ul style="margin:14px 0 0; padding-left:18px; color:var(--ink-soft); font-size:14.5px;">
-        <li>Estratégia, posicionamento e roteiro</li>
-        <li>Calendário de conteúdo e edição</li>
-        <li>Landing pages, CRM e automação</li>
-        <li>Captação de leads, mídia paga e analytics</li>
-        <li>Estratégia de parcerias e infraestrutura de vendas</li>
+      <ul style="margin:14px 0 0; padding-left:18px; color:var(--ink-soft); font-size:14px;">
+        <li>Brand strategy, roteiro e calendário de conteúdo</li>
+        <li>Edição e distribuição</li>
+        <li>Landing pages, e-commerce e CRM</li>
+        <li>Automações, mídia paga e retargeting</li>
+        <li>Affiliate tracking, estratégia de drops e parcerias</li>
+        <li>Otimização de conversão e analytics</li>
       </ul>
     </div>
   </div>
 
-  <div class="divider"></div>
-  <h3 style="margin-bottom:24px;">Arquitetura de tecnologia — infraestrutura invisível</h3>
-  <div class="flow">
-    <div class="flow-step">Instagram</div><div class="flow-arrow">↓</div>
-    <div class="flow-step">Landing page</div><div class="flow-arrow">↓</div>
-    <div class="flow-step">Style Assessment</div><div class="flow-arrow">↓</div>
-    <div class="flow-step">CRM (GoHighLevel)</div><div class="flow-arrow">↓</div>
-    <div class="flow-step">Automação + agenda</div><div class="flow-arrow">↓</div>
-    <div class="flow-step">Pagamento + onboarding</div><div class="flow-arrow">↓</div>
-    <div class="flow-step" style="border-color:var(--accent); font-weight:600;">Follow-up + indicação</div>
+  <div class="card" style="margin-top:24px; background:var(--dark-bg); border:none;">
+    <p style="font-family:var(--serif); font-style:italic; font-size:19px; color:var(--dark-text); max-width:none;">Christiane finds it. Christiane wears it. The audience wants it. Elevra builds the system that sells it.</p>
   </div>
 </section>
 
-<!-- ============ KPIS ============ -->
-<section id="kpis">
-  <div class="kicker">15 · KPIs — sem vanity metrics</div>
-  <h2>O que realmente medimos.</h2>
-  <div class="grid grid-3" style="margin-top:44px;">
-    <div class="card"><h3>Funil</h3><p style="margin-top:10px; font-size:14px;">Alcance → visitas ao perfil → seguidores → DMs → leads → calls → vendas → ticket médio → receita.</p></div>
-    <div class="card"><h3>Conteúdo</h3><p style="margin-top:10px; font-size:14px;">Watch time, retenção, compartilhamentos, saves, comentários, DMs, visitas ao perfil.</p></div>
-    <div class="card"><h3>Negócio</h3><p style="margin-top:10px; font-size:14px;">Leads qualificados, taxa de fechamento, CAC, ticket médio, receita mensal, recompra, indicações.</p></div>
-  </div>
-</section>
-
-<!-- ============ ROADMAP 90 DIAS ============ -->
-<section id="roadmap">
-  <div class="kicker">16 · Roadmap de 90 dias</div>
-  <h2>Da fundação à escala.</h2>
+<!-- ============ 90 DIAS ============ -->
+<section id="90dias">
+  <div class="kicker">16 · Primeiros 90 dias</div>
+  <h2>Posicionar, monetizar, escalar o que funciona.</h2>
 
   <div style="margin-top:44px;">
     <div class="phase">
-      <div class="phase-head"><h3>Foundation</h3><span class="days">Dias 1–15</span></div>
+      <div class="phase-head"><h3>Position + Test</h3><span class="days">Mês 1</span></div>
       <div class="phase-body">
-        <div><h4>O que fazemos</h4><p>Reposicionamento de bio, perfil, oferta e identidade visual. Setup de CRM e landing page.</p></div>
-        <div><h4>Christiane</h4><ul><li>Sessão de fotos de posicionamento</li><li>Gravação dos 3 posts fixados</li></ul></div>
-        <div><h4>Elevra</h4><ul><li>Reposicionamento de perfil</li><li>Setup técnico (CRM, landing, automação)</li></ul></div>
-        <div><h4>Entregável / KPI / Sucesso</h4><p>Perfil reposicionado no ar · KPI: bio + funil publicados · Sucesso: primeira Style Assessment recebida.</p></div>
+        <div><h4>Ações</h4><ul><li>Reposicionamento de bio e perfil</li><li>Setup de affiliate links e tracking</li><li>Publicação dos 7 pilares em ritmo semanal</li><li>Primeiro dia de outlet + primeiro batch day</li></ul></div>
+        <div><h4>KPIs</h4><ul><li>Cliques em links por Reel</li><li>Crescimento de saves e profile visits</li><li>Primeiras respostas de enquetes de validação</li></ul></div>
       </div>
     </div>
     <div class="phase">
-      <div class="phase-head"><h3>Authority</h3><span class="days">Dias 16–30</span></div>
+      <div class="phase-head"><h3>Monetize</h3><span class="days">Mês 2</span></div>
       <div class="phase-body">
-        <div><h4>O que fazemos</h4><p>Lançamento dos 5 pilares e das séries proprietárias em ritmo semanal.</p></div>
-        <div><h4>Christiane</h4><ul><li>Gravação semanal em locações South Florida</li><li>Resposta ativa a comentários e DMs</li></ul></div>
-        <div><h4>Elevra</h4><ul><li>Edição e publicação do calendário</li><li>Início do funil de captação de leads</li></ul></div>
-        <div><h4>Entregável / KPI / Sucesso</h4><p>12+ Reels publicados · KPI: saves e profile visits em alta · Sucesso: primeiros leads qualificados no CRM.</p></div>
+        <div><h4>Ações</h4><ul><li>Lançamento de Chris Picks Drop 001 (pré-venda/waitlist)</li><li>Ativação de DM automation completa</li><li>Primeiras conversas de brand partnership local</li></ul></div>
+        <div><h4>KPIs</h4><ul><li>Tamanho da waitlist</li><li>Conversão do drop</li><li>Comissão de afiliado acumulada</li></ul></div>
       </div>
     </div>
     <div class="phase">
-      <div class="phase-head"><h3>Monetization</h3><span class="days">Dias 31–60</span></div>
+      <div class="phase-head"><h3>Scale Winners</h3><span class="days">Mês 3</span></div>
       <div class="phase-body">
-        <div><h4>O que fazemos</h4><p>Lançamento da campanha Founding Clients e ativação do hero offer.</p></div>
-        <div><h4>Christiane</h4><ul><li>Entrega das primeiras VIP Style Experiences</li><li>Documentação das transformações</li></ul></div>
-        <div><h4>Elevra</h4><ul><li>Campanha de vendas e follow-up automatizado</li><li>Início de mídia paga leve para leads qualificados</li></ul></div>
-        <div><h4>Entregável / KPI / Sucesso</h4><p>5+ clientes fechadas · KPI: taxa de fechamento · Sucesso: primeiro mês de receita real de serviços.</p></div>
-      </div>
-    </div>
-    <div class="phase">
-      <div class="phase-head"><h3>Scale</h3><span class="days">Dias 61–90</span></div>
-      <div class="phase-body">
-        <div><h4>O que fazemos</h4><p>Otimização do funil com base em dados reais, início de parcerias locais.</p></div>
-        <div><h4>Christiane</h4><ul><li>Entrega consistente do hero offer</li><li>Primeiras colaborações com boutiques/negócios locais</li></ul></div>
-        <div><h4>Elevra</h4><ul><li>Otimização de conversão e CAC</li><li>Estruturação do cenário de receita para o mês seguinte</li></ul></div>
-        <div><h4>Entregável / KPI / Sucesso</h4><p>Funil validado com dados reais · KPI: CAC e ticket médio · Sucesso: aproximação do cenário B/C de receita.</p></div>
+        <div><h4>Ações</h4><ul><li>Dobrar produção dos formatos com melhor conversão</li><li>Chris Picks Drop 002 com base na demanda validada</li><li>Início de mídia paga leve para os Reels de melhor performance</li></ul></div>
+        <div><h4>KPIs</h4><ul><li>Revenue per content</li><li>Repeat purchase rate</li><li>Progresso em direção ao Cenário 2 de receita</li></ul></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ PRIMEIROS 14 DIAS ============ -->
+<!-- ============ 14 DIAS ============ -->
 <section id="14dias">
   <div class="kicker">17 · Primeiros 14 dias</div>
-  <h2>Segunda-feira, ela sabe exatamente o que fazer.</h2>
+  <h2>Do reposicionamento ao primeiro teste de Chris Picks.</h2>
 
   <div style="margin-top:40px;">
-    <div class="day-row"><div class="day-num">01</div><div><div class="day-title">Reposicionamento da bio e do nome de perfil</div><div class="day-detail">Publicar nova bio, atualizar foto de perfil e nome de campo.</div></div></div>
-    <div class="day-row"><div class="day-num">02</div><div><div class="day-title">Definição da oferta principal</div><div class="day-detail">Confirmar preços do Style SOS, Image Reinvention e VIP Style Experience.</div></div></div>
-    <div class="day-row"><div class="day-num">03</div><div><div class="day-title">Setup de landing page</div><div class="day-detail">Página com a oferta, Style Assessment e botão de agendamento.</div></div></div>
-    <div class="day-row"><div class="day-num">04</div><div><div class="day-title">Setup de CRM e automação</div><div class="day-detail">GoHighLevel configurado, DM automation para a palavra-chave "STYLE".</div></div></div>
-    <div class="day-row"><div class="day-num">05</div><div><div class="day-title">Sessão de fotos de posicionamento</div><div class="day-detail">Fotos para os 3 posts fixados e para o novo grid.</div></div></div>
-    <div class="day-row"><div class="day-num">06</div><div><div class="day-title">Roteiro dos 3 posts fixados</div><div class="day-detail">"Who is Christiane" · "How I can help you" · transformação de cliente.</div></div></div>
-    <div class="day-row"><div class="day-num">07</div><div><div class="day-title">Gravação — dia 1 de locação</div><div class="day-detail">South Florida Style + Style Authority (2 a 3 Reels).</div></div></div>
-    <div class="day-row"><div class="day-num">08</div><div><div class="day-title">Edição e publicação dos posts fixados</div><div class="day-detail">Os 3 pinned no ar.</div></div></div>
-    <div class="day-row"><div class="day-num">09</div><div><div class="day-title">Gravação — dia 2 de locação</div><div class="day-detail">Fitting Room + Luxury vs Affordable.</div></div></div>
-    <div class="day-row"><div class="day-num">10</div><div><div class="day-title">Lançamento do calendário semanal</div><div class="day-detail">Início da publicação seguindo o calendário de 7 dias.</div></div></div>
-    <div class="day-row"><div class="day-num">11</div><div><div class="day-title">Ativação de Stories diários</div><div class="day-detail">Framework manhã/meio-dia/tarde/noite no ar.</div></div></div>
-    <div class="day-row"><div class="day-num">12</div><div><div class="day-title">Início do sistema de engajamento de 30 min/dia</div><div class="day-detail">Resposta ativa a comentários e DMs.</div></div></div>
-    <div class="day-row"><div class="day-num">13</div><div><div class="day-title">Preparação da campanha Founding Clients</div><div class="day-detail">Oferta, Reel de lançamento e Stories prontos.</div></div></div>
-    <div class="day-row"><div class="day-num">14</div><div><div class="day-title">Lançamento da campanha de primeiras consultas</div><div class="day-detail">Publicação oficial + push de DM automation para captar os primeiros leads.</div></div></div>
+    <div class="day-row"><div class="day-num">01</div><div><div class="day-title">Nova bio e estrutura de link</div><div class="day-detail">Publicar bio nova e configurar link de bio (Linktree ou landing própria).</div></div></div>
+    <div class="day-row"><div class="day-num">02</div><div><div class="day-title">Affiliate links e tracking</div><div class="day-detail">Cadastro/ativação em programas de afiliados (SHEIN e outros) + UTM tracking.</div></div></div>
+    <div class="day-row"><div class="day-num">03</div><div><div class="day-title">Confirmação dos 7 pilares</div><div class="day-detail">Alinhar formatos, frequência e CTAs de cada pilar com Christiane.</div></div></div>
+    <div class="day-row"><div class="day-num">04</div><div><div class="day-title">Dia de filmagem SHEIN</div><div class="day-detail">Try-ons e reviews para 4–5 Reels (pilar Try-On).</div></div></div>
+    <div class="day-row"><div class="day-num">05</div><div><div class="day-title">Dia de filmagem outlet</div><div class="day-detail">Protocolo de shopping day em Sawgrass Mills — 10+ peças de conteúdo bruto.</div></div></div>
+    <div class="day-row"><div class="day-num">06</div><div><div class="day-title">Edição — lote 1</div><div class="day-detail">Primeiros 5 Reels editados e agendados.</div></div></div>
+    <div class="day-row"><div class="day-num">07</div><div><div class="day-title">Landing page no ar</div><div class="day-detail">Página com destaque para os finds da semana e captura de e-mail/waitlist.</div></div></div>
+    <div class="day-row"><div class="day-num">08</div><div><div class="day-title">Publicação dos 5 primeiros Reels</div><div class="day-detail">Início do calendário semanal oficial.</div></div></div>
+    <div class="day-row"><div class="day-num">09</div><div><div class="day-title">DM automation ativa</div><div class="day-detail">Palavra-chave "LINK" configurada para resposta automática com produto.</div></div></div>
+    <div class="day-row"><div class="day-num">10</div><div><div class="day-title">Início das enquetes de validação</div><div class="day-detail">"Would you buy this?" e "Guess the price" em Stories diários.</div></div></div>
+    <div class="day-row"><div class="day-num">11</div><div><div class="day-title">Edição — lote 2</div><div class="day-detail">Mais 5 Reels prontos, completando os primeiros 10.</div></div></div>
+    <div class="day-row"><div class="day-num">12</div><div><div class="day-title">Seleção de candidatos a Chris Picks</div><div class="day-detail">Baseado nas enquetes de validação — 10 a 15 produtos candidatos.</div></div></div>
+    <div class="day-row"><div class="day-num">13</div><div><div class="day-title">Teaser do primeiro Chris Picks</div><div class="day-detail">Reel + Stories de teaser, abertura de waitlist.</div></div></div>
+    <div class="day-row"><div class="day-num">14</div><div><div class="day-title">Revisão de analytics</div><div class="day-detail">Cliques, DMs, waitlist e primeiras métricas de conversão revisadas com Christiane.</div></div></div>
   </div>
-</section>
-
-<!-- ============ FOUNDING CLIENTS / PARCERIAS ============ -->
-<section id="founding">
-  <div class="kicker">18 · Primeira campanha & parcerias</div>
-  <h2>Founding Clients — as primeiras 5 mulheres da nova fase.</h2>
-  <p class="lede">Cinco mulheres selecionadas para uma experiência especial de reposicionamento, em troca de pagamento e autorização para documentar parte da transformação. Sem desvalorizar o serviço — é acesso antecipado, não desconto de vitrine.</p>
-
-  <div class="grid grid-2" style="margin-top:36px;">
-    <div class="card">
-      <h3>Componentes da campanha</h3>
-      <ul style="margin:14px 0 0; padding-left:18px; color:var(--ink-soft); font-size:14.5px;">
-        <li>Oferta: 5 vagas de VIP Style Experience com preço de fundação</li>
-        <li>Reel de anúncio + série de Stories</li>
-        <li>DM automation dedicada com a palavra "FOUNDING"</li>
-        <li>Landing page específica da campanha</li>
-        <li>Follow-up pessoal para cada lead qualificado</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Partnership engine</h3>
-      <p style="margin-top:10px; font-size:14px;"><b style="color:var(--ink);">Audience collaboration:</b> creators locais, boutiques, salões.<br><br><b style="color:var(--ink);">Client referral:</b> realtors, médicas, empreendedoras que indicam clientes.<br><br><b style="color:var(--ink);">Paid brand partnership:</b> marcas de moda — nunca a base da meta de $50K, apenas um complemento.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ VISÃO DE LONGO PRAZO ============ -->
-<section id="visao">
-  <div class="kicker">19 · Visão de longo prazo</div>
-  <h2>De creator a marca de imagem premium.</h2>
-  <div class="grid grid-4" style="margin-top:40px;">
-    <div class="card"><div class="pill">Fase 1</div><p style="margin-top:12px; font-size:14px;">Creator + Consultant</p></div>
-    <div class="card"><div class="pill">Fase 2</div><p style="margin-top:12px; font-size:14px;">South Florida Style Authority</p></div>
-    <div class="card"><div class="pill">Fase 3</div><p style="margin-top:12px; font-size:14px;">Premium Personal Brand</p></div>
-    <div class="card"><div class="pill">Fase 4</div><p style="margin-top:12px; font-size:14px;">Digital Products + Partnerships</p></div>
-  </div>
-  <p style="margin-top:20px; font-size:14px;">Possibilidades futuras (não o foco inicial): cursos, membership, eventos, equipe de stylists, método assinado. O foco dos primeiros 90 dias permanece 100% em receita de serviços.</p>
 </section>
 
 <!-- ============ FECHAMENTO ============ -->
 <section class="full statement" id="fechamento">
   <div class="inner">
-    <div class="kicker">Fechamento</div>
-    <div class="flow" style="align-items:flex-start; margin:36px 0 56px;">
-      <div style="display:flex; flex-wrap:wrap; gap:10px;">
-        <span class="pill" style="border-color:var(--dark-line); color:var(--dark-text-soft);">Attention</span>
-        <span class="pill" style="border-color:var(--dark-line); color:var(--dark-text-soft);">Authority</span>
-        <span class="pill" style="border-color:var(--dark-line); color:var(--dark-text-soft);">Trust</span>
-        <span class="pill" style="border-color:var(--dark-line); color:var(--dark-text-soft);">Conversation</span>
-        <span class="pill" style="border-color:var(--dark-line); color:var(--dark-text-soft);">Client</span>
-        <span class="pill" style="border-color:var(--dark-line); color:var(--dark-text-soft);">Transformation</span>
-        <span class="pill" style="border-color:var(--dark-line); color:var(--dark-text-soft);">Content</span>
-        <span class="pill" style="border-color:var(--dark-line); color:var(--accent-soft);">Growth</span>
-      </div>
-    </div>
-    <p class="quote-block">Christiane already has the hardest asset to manufacture — authenticity that people trust.</p>
-    <p class="quote-block" style="margin-top:20px; color:var(--dark-text);">Now, we build the business that deserves it.</p>
+    <div class="kicker">Mensagem final</div>
+    <p class="quote-block">She already finds what people want.</p>
+    <p class="quote-block" style="margin-top:20px; color:var(--dark-text);">Now we build the system that turns those finds into sales.</p>
   </div>
 </section>
 
-<footer class="enddeck">ELEVRA DIGITAL × CHRISTIANE FREITAS — Strategic Growth Presentation</footer>
+<footer class="enddeck">ELEVRA DIGITAL × CHRISTIANE FREITAS — Fashion Commerce Brand Presentation</footer>
 
 <script>
-  // progress bar
   const bar = document.getElementById('progress');
   function updateProgress(){
     const h = document.documentElement;
@@ -1029,7 +954,6 @@
   document.addEventListener('scroll', updateProgress, {passive:true});
   updateProgress();
 
-  // menu
   const nav = document.getElementById('fullnav');
   document.getElementById('menuOpen').addEventListener('click', ()=>{ nav.classList.add('open'); });
   document.getElementById('menuClose').addEventListener('click', ()=>{ nav.classList.remove('open'); });
